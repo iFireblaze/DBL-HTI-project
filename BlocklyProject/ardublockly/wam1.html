@@ -6,18 +6,21 @@
   <meta name="theme-color" content="#00878F">
   <link rel="icon" href="img/favicon.ico">
   <title class="translatable_title">Ardublockly</title>
-
   <!-- Materialize, Prettify, and Ardublockly CSS -->
   <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
   <link rel="stylesheet" href="prettify/arduino.css">
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
   <link href="test.css" rel="stylesheet" type="text/css">
 
+  <!-- ADDED STYLESHEET AND CODE -->
+  <script src="test.js"></script>
+  <script src="modal.js"></script>
+  <link href="test.css" rel="stylesheet" type="text/css">
+
   <!-- Ardublockly - These three files contain the compress version -->
   <script src="../blockly/blockly_compressed.js"></script>
   <script src="../blockly/blocks_compressed.js"></script>
   <script src="../blockly/arduino_compressed.js"></script>
-  <script src="test.js"></script>
   <!-- To use the uncompressed version comment out the above and comment in the ones below -->
   <!--script src="../blockly/blockly_uncompressed.js"></script>
   <script src="../blockly/blocks/logic.js"></script>
@@ -67,10 +70,10 @@
     <div class="nav-wrapper container">
       <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <a id="logo-container" class="brand-logo">
-        <span class="app_title translatable_title">Whack-a-mole:</span>
+        <a href="index.html"><span class="app_title translatable_title">Ardublockly lesson 1: </span></a>
         <!-- Sketch name editable text field -->
         <span class="sketch_name_wrapper">
-          <i class="mdi-image-edit sketch_name_icon"></i>
+          <i class="mdi-image-edit sketch_name_icon"> </i>
           <input id="sketch_name" class="sketch_name" type="text">
         </span>
       </a>
@@ -92,17 +95,21 @@
         <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
         <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
+        <!-- ADD NEW LINKS BELOW HERE -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
         <li id="features"><a href="features.html" target="_blank">list of features</a></li>
         <li id="template"><a href="template.html" target="_blank">template</a></li>
-        <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1(old)</a></li>
+        <li id="lesson1"><a href="wam1old.html" target="_blank">Lesson 1(old)</a></li>
+        <li id="lesson1"><a href="wamintro.html" target="_blank">Introduction</a></li>
+        <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
       </ul>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <div class="collapsible-header"><span class="translatable_examples">Lessons</span><i class="mdi-navigation-arrow-drop-down"></i></div>
+          <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
           <div class="collapsible-body">
             <ul>
+              <!-- NOT HERE, LEAVE THIS AS IT IS, IT BREAKS ARDUINO CODE OTHERWISE -->
               <li id="menu_example_1"><a href="#!">Blink</a></li>
               <li id="menu_example_2"><a href="#!">Serial print</a></li>
               <li id="menu_example_3"><a href="#!">Serial repeat game</a></li>
@@ -166,7 +173,7 @@
             </div>
           </div>
         </div>
-        <!-- Blockly Panel -->
+        <!-- Blockly Panel (panel rechts) -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
             <div id="content_blocks" class="content z-depth-1"></div>
@@ -175,136 +182,136 @@
       </div>
       <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
+          
+          <!-- ADDS TEXT BOARD-->
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
               <span class="translatable_arduinoSourceCode">Instructions</span>
             </div>
+
             <div class="collapsible-body">
-              <select type="text" id="dropBox" onchange="changeSelect()">
-                <option value="" selected disabled hidden>Choose a step to start!</option>
-                <option value="step1">Step 1: Knowing the board</option>
-                <option value="step2">Step 2: Getting to know the blocks</option>
-                <option value="step3">Step 3: Making the program</option>
-                <option value="step4">Step 4: Uploading and testing the code</option>
-            </select>
-            
-            <!-- De content waar tussen geswitched wordt -->
-            <div id="step1" style="display:none">
-                <b><i>Hi, and welcome to this project: Creating whack-a-mole!</i></b><br>
-                For this project we'll take you step by step and teach you how to program the game of whack-a-mole using an Arduino and this website.<br><br>
-                You'll be doing this by following the provided instructions. To help you along the way we'll provide hints and example code when you get stuck.<br><br>
-                Now to start off, we'll give a little introduction on the Arduino board.<br>
-                The Arduino board is like a little computer that can do things with the parts attached to it.<br>
-                It has a bunch of cables attached to it,and all cables are used for a part of the game.<br><br>
-                These parts are <b>the blue LEDs (lights), the buttons, and the red and green LEDs.</b> They are connected in the following way:<br>
-                - 2-6 Blue LEDs<br>
-                - 7 Red LED<br>
-                - 8 Green LED<br>
-                - 9-13 buttons<br><br>
-                (See also this image of the schematics below)<br>
-                <img src="img\schematicview.png" alt="Schematic view of the arduino" width="400"><br>
-                <i>Now let's move onto the next step! Use the dropdown menu to select step 2.</i>
-            </div>
-            <div id="step2" style="display:none">
-                <b><i>Now we'll explain a bit about programming the Arduino.</i></b><br>
-                To make the Arduino do something you have to give it instructions. These instructions are in the form of code.
-                See these as specific directions on what the Arduino board has to do.<br><br>
-                To make it easier to write code, you can use code in the form of blocks on this website.<br>
-                To the left you can see the categories of blocks, these are:<br><br>
-                - logic<br>
-                - loops<br>
-                - math<br>
-                - text<br>
-                - variables<br>
-                - functions<br>
-                - input/output<br>
-                - time<br>
-                - Audio<br>
-                - Motors<br>
-                - Comms<br><br>
-                Click on them and see what blocks pop up.<br>
-                Don't be intimidated by all the types, we'll explain which ones you'll need when you need them.<br><br>
-                Notice how each block has a shape and how some shapes fit into each other?
-                Snap some blocks together (doesn't matter which ones) in the working space (white square in the middle) and see that they stick together.<br><br>
-                <i>Once you get a feel for it, use the dropdown menu to move to step 3.</i>
-            </div>
-            <div id="step3" style="display:none">
-                <b><i>Now it's time to make something.</i></b> We'll start off small by turning on one of the lights.<br><br>
+
+            <div id="step1" style="display:block">
+                <b>Start of the project: Turning on an LED</b><br>
+                Now it's time to code something.<br>
+                We'll start off small by turning on one of the LED's (lights).<br><br>
                 To do this you'll need the basic block that we'll use for all programs, the "Arduino run first, Arduino loop forever"-block<br>
                 This block performs all tasks that you want the Arduino to do. Either at the start when you first turn it on, or it keeps performing it over and over.<br><br>
                 For now we just need "Arduino run first", since we'll turn it on and it doesn't need to be turned off.<br><br>
-                Drag the "Arduino run first, arduino loop forever" block to the working space.
-                Now you will need to put something there to turn an LED light on. This is done with the "Set digital pin to" block.<br><br>
-                You want to turn on an LED, let's select the one at pin 2 this time.<br>
-                Change the 0 in the block to a 2, and keep the second part on HIGH (this means on, LOW is off)<br>
-                <img src="img\pro1par1im1.png" alt="how to change the pin num" width="200"><br>
-                Now click this block into the previous block, both openings work, but "run first" makes most sense.<br>
-                That's it! Now all that's left is to put that code on the Arduino and let it perform the actions.<br><br>
-                <i>Go to the next step to finish this lesson!</i>
+                <img src="img\block-loop1.png" alt="Block arduino loop" width="200"><br>
+                <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
+                (1/6)
+                <button id="next" onclick="changeStep(1, 'next')">next</button>
             </div>
+
+            <div id="step2" style="display:none"> 
+              <b>Step 1</b><br>
+                Drag the "Arduino run first, arduino loop forever" block to the working space. You can find this block under the category 'Functions'. <br><br>
+                Now you will need to "click" another block in the block to turn an LED light on. This is done with the "Set digital pin to" block. <br>
+                This block enables to turn on or off a part of the Arduino connected to a certain 'pin' (space on the Arduino).<br>
+                For now we only want to turn on a LED. Therefore, we make use of pin 2 (LED 1) <br>
+                <img src="img\LED-block.png" alt="LED block"><br>
+                <i>Go to the next step.</i><br>
+                <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
+                (2/6)
+                <button id="next" onclick="changeStep(2, 'next')">next</button>
+            </div>
+
+            <div id="step3" style="display:none">
+              <b>Step 2</b>
+              Drag the "Set digital pin to" block to the white canvas in the middle, and try to click it in the "Arduino run first, Arduino loop forever" block.<br>
+              This Block has two input places (openings), put the block in the "run first" input place.<br>
+              Change the 0 in the block to a 2. In this way you select LED 1. Keep the second part of the block on HIGH (this means on, LOW means off).<br>
+              <img src="img\pro1par1im1.png" alt="how to change the pin num" width="200"><br>
+              That's it! Now all that's left is to put that code on the Arduino and let it perform the action.<br><br>
+              <i>Go to the next step to finish this lesson!</i><br>
+              <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
+              (3/6)
+              <button id="next" onclick="changeStep(3, 'next')">next</button>
+            </div>
+
             <div id="step4" style="display:none">
+                <b>Upload code to the Arduino</b>
                 Finally, we get to put your code on the Arduino!<br>
-                This consists of two steps, first you verify your code. This is to check that it works.
+                This consists of two steps, first you verify your code. This is to check whether it works.
                 This is done by hovering over the play button in the upper-right, and then selecting the check mark.<br>
                 <img src="img\verify.png" alt="button to verify your code"><br>
                 Press the bar with "Arduino IDE output" at the bottom of the screen to see whether it works.<br>
                 If after "Verifying..." it says nothing else, it's good to go!<br>
-                Now to upload the code to the Arduino. Simply press the play button.<br>
+                <i>Continue to the second step of uploading the code. </i><br>
+                <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
+                (4/6)
+                <button id="next" onclick="changeStep(4, 'next')">next</button>
+            </div>
+
+            <div id="step5" style="display:none">
+                Now to upload the code to the Arduino. First connect the Arduino by simply plugging it in the USB port.<br>                
+                Now simply press the play button.<br>
                 <img src="img\run.png" alt="button to run your code"><br>
-                If the arduino is connected, you will now see the first LED turn on. Great job!<br><br>
+                If the arduino is connected in the right way, you will now see the first LED turn on. Great job!<br><br>
                 You will probably want to save this code and use it later. This is done in a format called XML.<br>
                 Press the button labeled with "save" in the bar at the top to save your code and use "open" to later open it.<br><br>
-                <i>If you want to try out something more, can you turn on the other lights? If you want to know which pins have a LED check the description at step 1.<br><br>
-                Is it possible to turn on more lights at once? Try figuring it out and use the hint if you need it.<br><br>
+                <i>Continue to the last step</i><br>
+                <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
+                (5/6)
+                <button id="next" onclick="changeStep(5, 'next')">next</button>
+            </div>
+
+            <div id="step6" style="display:none">
+              <b>Extra excercise</b><br>
+                You were able to turn on the first LED, can you also turn on the other lights? If you want to know which pins have a LED check the description in the introduction.<br><br>
+                If you think you did it, try it out by uploading the code to the Arduino. <br><br> 
+                
+                Secondly, is it possible to turn on more lights at once? Try figuring it out and use the hint if you need it.<br><br>
                 <details>
                   <summary>For a hint, click here!:</summary>
                   <p>Maybe if you give it multiple commands to do at once when it first runs? Maybe it's possible to click more blocks under the "set pin 2 to ..." block.</p>
                 </details><br>
-                <b>If you get stuck at any lesson, don't worry! At the end we'll provide an example file that you can use to continue to the next lesson (not implemented in this prototype)</i>
-                If you're all done, you can move on to part 2 by pressing this button:</b>
-                <div class="popup" id="popup-1">
-                  <div class="overlay"></div>
-                  <div class="content">
-                    <div class="close-btn"  onclick="togglepopup()">&times;</div>
-                    <img src="img/feedpos.png" alt="Trulli" width="500" height="333">
+                
+                <i>If you're all done, you can check the answer using the left button and move on to lesson 2 by pressing the right button:</i><br>
+                <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
+                <div id="modalAnswer" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modalAnswer')">&times;</span>
+                    <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
+                    <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
+                    <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson1.xml'), closeModal('modalAnswer')">Show me the answer</button>
                   </div>
                 </div>
-                <button onclick="togglepopup()">Show Popup</button>
-                <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson2.xml')">lesson1</button>
-              
-                <script src="test.js"></script>
+
+                <button id="myBtn" onclick="openModal('modalNext')">Go to the next lesson</button><br>
+                <div id="modalNext" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modalNext')">&times;</span>
+                    <img src="img/feedpos.png" alt="positive feedback" width="500" height="333">
+                    <button><a href="wam1.html" target="_blank">Move to lesson 2!</a></button>
+                  </div>
+                </div>
+                <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
+                (6/6)
             </div>
             
-            <!-- Script dat wisselt tussen content gebasseerd op dropdown menu -->
             <script>
-            function changeSelect() {
-                var x = document.getElementById("dropBox").value;
-                if (x == "step1") {
-                    document.getElementById("step1").style.display = "block";
-                    document.getElementById("step2").style.display = "none";
-                    document.getElementById("step3").style.display = "none";
-                    document.getElementById("step4").style.display = "none";
-                } else if (x == "step2") {
-                    document.getElementById("step1").style.display = "none";
-                    document.getElementById("step2").style.display = "block";
-                    document.getElementById("step3").style.display = "none";
-                    document.getElementById("step4").style.display = "none";
-                } else if (x == "step3") {
-                    document.getElementById("step1").style.display = "none";
-                    document.getElementById("step2").style.display = "none";
-                    document.getElementById("step3").style.display = "block";
-                    document.getElementById("step4").style.display = "none";
-                } else if (x == "step4") {
-                    document.getElementById("step1").style.display = "none";
-                    document.getElementById("step2").style.display = "none";
-                    document.getElementById("step3").style.display = "none";
-                    document.getElementById("step4").style.display = "block";
+            
+            function changeStep(curStep, direction) {
+                var nextpart = "step"+(curStep+1);
+                var prevpart = "step"+(curStep-1);
+                if (direction == "prev") {
+                  document.getElementById("step"+curStep).style.display = "none";
+                  document.getElementById(prevpart).style.display = "block";
+                } else if (direction == "next") {
+                  document.getElementById("step"+curStep).style.display = "none";
+                  document.getElementById(nextpart).style.display = "block";
                 }
-            }
+              }
+
             </script>
+
             </div>
           </li>
+          <!-- END OF ADDED CODE-->
+
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>

@@ -1,0 +1,5 @@
+Drop all your files in the ardublockly folder as you would in the folder that you work in.
+For example, if you add images that are contained in the img folder in the ardublockly folder than also put in the same folder here
+Or if you made a new HTML page, put that page in the ardublockly folder here.
+When you want to work on the latest version, download the ardublockly folder and update the old folder on your computer with the new one you just downloaded
+This way you don't have to download the entire project, just the part that changes.

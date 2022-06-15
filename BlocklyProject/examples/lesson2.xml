@@ -1,0 +1,34 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_functions" id="7+a(h-#GnbSpQ=4!U`RN" x="269" y="151">
+    <statement name="LOOP_FUNC">
+      <block type="controls_if" id="6Rku.0Vdk,AvssVoW,US">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="io_digitalread" id="7Da=BTt)vm%5R|B)AC:X">
+            <field name="PIN">9</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="io_digitalwrite" id="Vu!PWUB(mY/4r/`n_.|s">
+            <field name="PIN">2</field>
+            <value name="STATE">
+              <block type="io_highlow" id="vt)MWp:cE6xAvgoq#B.F">
+                <field name="STATE">LOW</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="io_digitalwrite" id="S-gZY+}C0d5I9!,~q%p3">
+            <field name="PIN">2</field>
+            <value name="STATE">
+              <block type="io_highlow" id="nTGO:)7kM!vOG,ROj%)Z">
+                <field name="STATE">HIGH</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

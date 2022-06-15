@@ -3,3 +3,5 @@ For example, if you add images that are contained in the img folder in the ardub
 Or if you made a new HTML page, put that page in the ardublockly folder here.
 When you want to work on the latest version, download the ardublockly folder and update the old folder on your computer with the new one you just downloaded
 This way you don't have to download the entire project, just the part that changes.
+
+Also: in case you want to try out with the pre-made examples (xml files), download that folder as well and replace your original "examples" folder

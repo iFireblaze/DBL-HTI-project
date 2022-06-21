@@ -99,8 +99,8 @@
         <li id="index"><a href="index.html" target="_blank">index</a></li>
         <li id="features"><a href="features.html" target="_blank">list of features</a></li>
         <li id="template"><a href="template.html" target="_blank">template</a></li>
-        <li id="lesson1"><a href="wam1old.html" target="_blank">Lesson 1(old)</a></li>
-        <li id="lesson1"><a href="wamintro.html" target="_blank">Introduction</a></li>
+        <li id="lesson1old"><a href="wam1old.html" target="_blank">Lesson 1(old)</a></li>
+        <li id="introduction"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
       </ul>
     <li class="no-padding">
@@ -213,14 +213,7 @@
 
             <!-- POP-UPS -->
             <div id="step2" style="display:none">
-              <div class="popup" id="popup-1">
-                <div class="overlay"></div>
-                <div class="content">
-                  <div class="close-btn" onclick="togglepopup()">&times;</div>
-                  <img src="img/feedpos.png" alt="positive feedback" width="500" height="333">
-                </div>
-              </div>
-              <button onclick="togglepopup()">Show Popup example</button>
+              no
             </div>
 
             <!-- BACK AND FORWARD BUTTONS -->
@@ -245,6 +238,7 @@
 
             <!-- POP UP WITH BUTTON THAT GOES THE ANSWER -->
             <div id="step4" style="display:none">
+              
               <!-- Trigger/Open The Modal -->
               <button id="myBtn" onclick="openModal('myModal')">Open Modal</button>
 
@@ -264,8 +258,16 @@
               <div id="secModal" class="modal">
                 <div class="modal-content">
                   <span class="close" onclick="closeModal('secModal')">&times;</span>
-                  <img src="img/feedpos.png" alt="positive feedback" width="500" height="333">
-                  <button><a href="wam1.html" target="_blank">Move to next lesson!</a></button>
+                  <p>Have you checked if your program works? If you're stuck check out the hints or the answer. When you're ready to continue, press the button below.</p>
+                  <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                      <div class="close-btn" onclick="togglepopup()">&times;</div>
+                      <img src="img/feedpos.png" alt="positive feedback" width="333" height="333">
+                      <button><a href="wam1.html" target="_blank">Move to next lesson!</a></button>
+                    </div>
+                  </div>
+                  <button onclick="togglepopup()">I'm all done!</button>
                 </div>
 
               </div>

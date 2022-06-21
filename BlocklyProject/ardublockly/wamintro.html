@@ -71,7 +71,7 @@
     <div class="nav-wrapper container">
       <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <a id="logo-container" class="brand-logo">
-        <a href="index.html"><span class="app_title translatable_title">Ardublockly lesson 1: </span></a>
+        <a href="index.html"><span class="app_title translatable_title">Whack-a-Mole introduction: </span></a>
         <!-- Sketch name editable text field -->
         <span class="sketch_name_wrapper">
           <i class="mdi-image-edit sketch_name_icon"> </i>
@@ -197,7 +197,15 @@
                 <b>Hi, and welcome to this project: Creating whack-a-mole!</b><br>
                 For this project we'll take you step by step and teach you how to program the game of whack-a-mole using an Arduino and this website.<br><br>
                 You'll be doing this by following the provided instructions. To help you along the way we'll provide hints and example code when you get stuck.<br>
-                Via <a href="https://www.tinkercad.com/things/dVMTdoPAWWe-prototype-v2/editel?sharecode=YRLFMx1NZKz4ccBjpIICwajnI_DIqnxxZML2nRUTrtU" > this</a> link you can view the demo of the game you are going to create!<br><br>
+                If you want to try out what you are going to create, below you can find an interactable demo of the final product!<br>
+                <button id="myBtn" onclick="openModal('modalTinker')">Check out the demo!</button><br><br>
+                <div id="modalTinker" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modalTinker')">&times;</span>
+                    <b>Check out the interactive example below. If you want to you can also check out the design behind it by clicking the title "prototype v2"</b>
+                    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/dVMTdoPAWWe?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
+                  </div>
+                </div>
                 <b>Note:</b></i>If you get stuck at any lesson, don't worry! At the end of every lesson we'll provide an example file that you can use to continue to the next lesson.</i>
                 <i>Move onto the next step to get started! Use the dropdown menu to select step 2</i>
                 <img src="img\whack-a-mole.png" alt="programming for beginners" width="400"><br>

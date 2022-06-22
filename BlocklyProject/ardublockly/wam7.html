@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00878F">
+  <link rel="icon" href="img/favicon.ico">
+  <title class="translatable_title">Ardublockly</title>
+  <!-- Materialize, Prettify, and Ardublockly CSS -->
+  <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
+  <link rel="stylesheet" href="prettify/arduino.css">
+  <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
+  <link href="test.css" rel="stylesheet" type="text/css">
+
+  <!-- ADDED STYLESHEET AND CODE -->
+  <script src="test.js"></script>
+  <script src="modal.js"></script>
+  <link href="test.css" rel="stylesheet" type="text/css">
+
+  <!-- Ardublockly - These three files contain the compress version -->
+  <script src="../blockly/blockly_compressed.js"></script>
+  <script src="../blockly/blocks_compressed.js"></script>
+  <script src="../blockly/arduino_compressed.js"></script>
+  <!-- To use the uncompressed version comment out the above and comment in the ones below -->
+  <!--script src="../blockly/blockly_uncompressed.js"></script>
+  <script src="../blockly/blocks/logic.js"></script>
+  <script src="../blockly/blocks/loops.js"></script>
+  <script src="../blockly/blocks/math.js"></script>
+  <script src="../blockly/blocks/text.js"></script>
+  <script src="../blockly/blocks/lists.js"></script>
+  <script src="../blockly/blocks/colour.js"></script>
+  <script src="../blockly/blocks/variables.js"></script>
+  <script src="../blockly/blocks/procedures.js"></script>
+  <script src="../blockly/blocks/arduino/io.js"></script>
+  <script src="../blockly/blocks/arduino/map.js"></script>
+  <script src="../blockly/blocks/arduino/procedures.js"></script>
+  <script src="../blockly/blocks/arduino/serial.js"></script>
+  <script src="../blockly/blocks/arduino/servo.js"></script>
+  <script src="../blockly/blocks/arduino/spi.js"></script>
+  <script src="../blockly/blocks/arduino/stepper.js"></script>
+  <script src="../blockly/blocks/arduino/time.js"></script>
+  <script src="../blockly/blocks/arduino/tone.js"></script>
+  <script src="../blockly/blocks/arduino/variables.js"></script>
+  <script src="../blockly/generators/arduino.js"></script>
+  <script src="../blockly/generators/arduino/boards.js"></script>
+  <script src="../blockly/generators/arduino/io.js"></script>
+  <script src="../blockly/generators/arduino/lists.js"></script>
+  <script src="../blockly/generators/arduino/logic.js"></script>
+  <script src="../blockly/generators/arduino/loops.js"></script>
+  <script src="../blockly/generators/arduino/map.js"></script>
+  <script src="../blockly/generators/arduino/math.js"></script>
+  <script src="../blockly/generators/arduino/procedures.js"></script>
+  <script src="../blockly/generators/arduino/serial.js"></script>
+  <script src="../blockly/generators/arduino/servo.js"></script>
+  <script src="../blockly/generators/arduino/spi.js"></script>
+  <script src="../blockly/generators/arduino/stepper.js"></script>
+  <script src="../blockly/generators/arduino/text.js"></script>
+  <script src="../blockly/generators/arduino/time.js"></script>
+  <script src="../blockly/generators/arduino/tone.js"></script>
+  <script src="../blockly/generators/arduino/variables.js"></script-->
+
+  <!-- Default language js files, user selection appended to head on load -->
+  <script src="../blockly/msg/js/en.js"></script>
+  <script src="msg/en.js"></script>
+</head>
+
+<body>
+  <!-- Horizontal Navigation bar -->
+  <nav class="nav-fixed arduino_teal">
+    <div class="nav-wrapper container">
+      <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      <a id="logo-container" class="brand-logo">
+        <a href="index.html"><span class="app_title translatable_title">Ardublockly lesson 1: </span></a>
+        <!-- Sketch name editable text field -->
+        <span class="sketch_name_wrapper">
+          <i class="mdi-image-edit sketch_name_icon"> </i>
+          <input id="sketch_name" class="sketch_name" type="text">
+        </span>
+      </a>
+      <!-- Horizontal Navbar links only shown on large resolutions -->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#" id="button_load"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li>
+        <li><a href="#" id="button_save"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
+        <li><a href="#" id="button_delete"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sidebar navigation -->
+  <ul id="slide-out" class="side-nav">
+    <li class="logo"><img src="img/sidenav_header.png" alt="Ardublockly block image"></li>
+    <li class="no-padding">
+      <ul>
+        <li id="menu_load"><a href="#"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li>
+        <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
+        <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
+        <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
+        <!-- ADD NEW LINKS BELOW HERE -->
+        <li id="index"><a href="index.html" target="_blank">index</a></li>
+        <li id="features"><a href="features.html" target="_blank">list of features</a></li>
+        <li id="template"><a href="template.html" target="_blank">template</a></li>
+        <li id="lesson1 old"><a href="wam1old.html" target="_blank">Lesson 1(old)</a></li>
+        <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
+        <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
+        <li id="lesson2"><a href="wam2.html" target="_blank">Lesson 2</a></li>
+        
+      </ul>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
+          <div class="collapsible-body">
+            <ul>
+              <!-- NOT HERE, LEAVE THIS AS IT IS, IT BREAKS ARDUINO CODE OTHERWISE -->
+              <li id="menu_example_1"><a href="#!">Blink</a></li>
+              <li id="menu_example_2"><a href="#!">Serial print</a></li>
+              <li id="menu_example_3"><a href="#!">Serial repeat game</a></li>
+              <li id="menu_example_4"><a href="#!">Servo knob</a></li>
+              <li id="menu_example_5"><a href="#!">Stepper knob</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding side-menu-end">&nbsp;</li>
+  </ul>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l8" style="position:relative">
+        <!-- Toolbox visibility button -->
+        <a id="button_toggle_toolbox" class="waves-effect waves-light btn-flat button_toggle_toolbox_off" style="display: none"><i id="button_toggle_toolbox_icon" class="mdi-action-visibility-off"></i></a>
+        <!-- Arduino IDE action buttons -->
+        <div id="ide_buttons_wrapper">
+          <a id="button_ide_left" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_yellow"><i id="button_ide_left_icon" class="mdi-action-open-in-browser"></i></a>
+          <a id="button_ide_middle" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_teal"><i id="button_ide_middle_icon" class="mdi-navigation-check"></i></a>
+          <a id="button_ide_large" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_orange"><i id="button_ide_large_icon" class="mdi-av-play-arrow"></i></a>
+          <div id="button_ide_large_spinner" class="preloader-wrapper active ide_loader" style="display:none">
+            <div class="spinner-layer spinner-orange">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-dark-teal">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-yellow">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-light-teal">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Blockly Panel (panel rechts) -->
+        <div class="card-panel white" style="padding: 0">
+          <div id="blocks_panel" class="content blocks_panel_large">
+            <div id="content_blocks" class="content z-depth-1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l4">
+        <ul class="collapsible z-depth-1" data-collapsible="accordion">
+          
+          <!-- ADDS TEXT BOARD-->
+          <li>
+            <div class="collapsible-header active">
+              <span class="collapsible_logo">{ }</span>
+              <span class="translatable_arduinoSourceCode">Instructions</span>
+            </div>
+
+            <div class="collapsible-body">
+
+            <div id="step1" style="display:block">
+                <b>Introduction lesson 7</b><br>
+                In the previous lesson, you learned to turn on the LED for an amount of time and check multiple times if the button has been pressed. 
+                Then you got out of the loop and the led turned off. <br><br>
+                We now want the program to do this for all led and buttons. <br> 
+                In this lesson, we are setting this up for all LED button combos and we learn how to create a function.<br>
+
+                <img src="img\lesson7-intro.png" alt="You've got this" width="300"><br>
+                <i>Proceed to step 2. </i><br>
+                <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
+                (1/10)
+                <button id="next" onclick="changeStep(1, 'next')">next</button>
+            </div>
+
+            <div id="step2" style="display:none"> 
+                <b>Random range</b><br>
+                The first important thing is that the game needs to pick a random light button combo so that the light will turn on.<br>
+                We already learned about picking a random integer for our range of loops. We can also pick a random integer for our LEDs. <br><br>
+                <b>Question :</b><br>
+                What should the range be in which we pick a random integer for our LED?<br><br>
+                <details>
+                  <summary>For the answer, click here!</summary>
+                  <p>1 till 5, we have 5 button-LED combos. Therefore we pick a random number from 1 to 5 and turn the LED with this number on.<br></p>
+                </details><br>
+        
+                <img src="img\schematicview.png" alt="Arduino" width="300"><br>
+                <i>Go to the next step.</i><br>
+                <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
+                (2/10)
+                <button id="next" onclick="changeStep(2, 'next')">next</button>
+            </div>
+
+            <div id="step3" style="display:none">
+                <b>Set LED to random</b> <br>
+                We will choose this random LED before we are going into our loop of checking if a button is pressed. <br>
+                So start setting the loops to a random integer.<br>
+                Then pick a random integer for a random button number and set this to the variable ‘buttoncombo’. <br>
+  <!-- pas plaatje aan -->
+                <!-- <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br> -->
+                Proceed to the next step.<br>
+                <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
+                (3/10)
+                <button id="next" onclick="changeStep(3, 'next')">next</button>
+            </div>
+
+            <div id="step4" style="display:none">
+                <b>Create a loop. </b><br>
+                Now we proceed with the loop.  We use the block “repeat loop times again”. <br>
+                You can now start a loop<br><br>
+               <b>Example :</b><br>
+                We want to make different actions for every button that is chosen from the random integer.<br>
+                We want the program to perform the task learned in the previous lesson for "LED BUTTON 1 combo" if the ‘buttoncombo’ variable is 1.<br> 
+                We want to let the program perform this task for the LED BUTTON 2 combo if 2 is chosen etc.<br>
+                Proceed to step 5 to learn more about the if/else funtion. <br>
+
+                <img src="img\lesson7-step4.png" alt= "blocks so far" width="400"><br>
+                <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
+                (4/10)
+                <button id="next" onclick="changeStep(4, 'next')">next</button>
+            </div>
+
+            <div id="step5" style="display:none">
+                <b>Introducing If/else</b> <br>
+                When we use the "if/else" block we actually let the program check the first 'if' condition then he checks the 'else if' condition and then the next 'else if' condition and so on.<br> 
+                If a condition is met the code in that 'else if' is executed, and it stops checking the other conditions if no loop is implemented.<br>
+                If no condition is met he just stops the loops and does nothing.<br><br>
+                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br>
+                
+                <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
+                (5/10)
+                <button id="next" onclick="changeStep(5, 'next')">next</button>
+            </div>
+
+            <div id="step6" style="display:none">
+                <b>If/Else conditions</b> <br>
+                For the game Wack a mole we need the if/else function to check for five conditions. <br><br>
+                These are: <br>
+                <i>
+                1. if ‘buttoncombo’ equals 1, turn on LED 1. (Checks if button 1 is pressed) <br> <br>
+                2. else if ‘buttoncombo’ equals 2, turn on LED 2. (Checks if button 2 is pressed) <br><br>
+                3. else if ‘buttoncombo’ equals 3, turn on LED 3. (Checks if button 3 is pressed) <br><br>
+                4. else if ‘buttoncombo’ equals 4, turn on LED 4. (Checks if button 4 is pressed) <br><br>
+                5. else if ‘buttoncombo’ equals 5, turn on LED 5. (Checks if button 5 is pressed) <br><br>
+                </i><br>
+                Proceed to the next step to implement these conditions. <br>
+                <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
+                (6/10)
+                <button id="next" onclick="changeStep(6, 'next')">next</button>
+          </div>
+
+          <div id="step7" style="display:none">
+              <b>Implementing the If/Else conditions</b> <br>
+              <b>Remember:</b><br>
+              You already made this code for checking the button in the previous lesson!<br>
+              You can if you like even just copy-paste the code with ctrl +c and change the numbers!<br><br>
+              <img src="img\great-job.png" alt= "great-job" width="400"><br>
+              The function can now turn on a random LED and check if a certain button is pressed. <br> 
+              <button id="prev" onclick="changeStep(7, 'prev')">previous</button>
+              (7/10)
+              <button id="next" onclick="changeStep(7, 'next')">next</button>
+          </div>
+        
+          <div id="step8" style="display:none">
+              <b>Adding the wait function to your loop.</b> <br>
+              Like in the previous lesson we now want the function to wait a few seconds before performing the loop again.<br>
+              Add the wait function in your loop.<br>
+              Now your loop is done, if no buttons are pressed, the LED is still on!<br>
+              Therefore we let the function wait for 5000 microseconds again to then turn all the LEDs off so no LED will stay on.<br>
+              For this we make a function to switch off all our LEDs at once in a separate code block.<br>
+              Proceed to step 9 to create this function.<br>
+              <img src="img\clock.png" alt= "clock" width="300"><br>
+              <button id="prev" onclick="changeStep(8, 'prev')">previous</button>
+              (8/10)
+              <button id="next" onclick="changeStep(8, 'next')">next</button>
+          </div>
+
+          <div id="step9" style="display:none">
+              <b>Creating a function to turn off all the LEDs at once.</b> <br>
+              A function is a small program with one or multiple tasks in it. <br>
+              You can make it yourself and if you call the function, 
+              all the tasks that you put into that function will be executed by the program. <br><br>
+              Make a function with the word ‘to’ and call the function ‘turnOff’.<br>
+              Make this a separate block from the rest of the program.<br>
+              <b>Example:</b><br>
+              <img src="img\turn-off-function.png" alt= "turn-off-function" width="300"><br>
+              Great job! You can now always use this function by symply using the block ‘turnOff’.<br>
+              <img src="img\turn-off.png" alt= "turn-off" width="100"><br>
+              Put the 'turn off' function block outside of your loop after you waited a few seconds.<br>
+              By doing this all the LEDs will turn off if there is no button pressed and it waited a while.<br>
+              <br>
+              <button id="prev" onclick="changeStep(9, 'prev')">previous</button>
+              (9/10)
+              <button id="next" onclick="changeStep(9, 'next')">next</button>
+         </div>
+
+          <div id="step10" style="display:none">
+              <b>Great Job! The base of the game is done.</b> <br>
+              Now the program can turn on a random LED and check if you press the button and eventually turn it off.<br>
+              <br>
+              <b>Question:</b><br>
+              What do you think will be the next step?<br>
+              <details>
+                <summary>For a hint, click here!</summary>
+                <p>We want the game to do this again and again for different LEDs so you can play on and on!<br></p>
+              </details><br>
+              <img src="img\whackamole.png" alt= "whack a mole" width="300"><br>
+              Try out your code on the Arduino!<br> 
+              If you're all done, you can check the answer using the left button. <br><br>
+              Move on to lesson 8, the last one!<br>
+              <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
+              <div id="modalAnswer" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('modalAnswer')">&times;</span>
+                  <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
+                  <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
+                  <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson7.xml'), closeModal('modalAnswer')">Show me the answer</button>
+                </div>
+            </div>
+
+          <button id="myBtn" onclick="openModal('modalNext')">Go to the next lesson</button><br>
+          <div id="modalNext" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('modalNext')">&times;</span>
+              <img src="img/feedpos.png" alt="positive feedback" width="500" height="333">
+              <button><a href="wam8.html" target="_blank">Move to lesson 8!</a></button>
+            </div>
+          </div>
+          <button id="prev" onclick="changeStep(10, 'prev')">previous</button>
+          (10/10)
+      </div>
+      </div>
+
+            <script>
+            
+            function changeStep(curStep, direction) {
+                var nextpart = "step"+(curStep+1);
+                var prevpart = "step"+(curStep-1);
+                if (direction == "prev") {
+                  document.getElementById("step"+curStep).style.display = "none";
+                  document.getElementById(prevpart).style.display = "block";
+                } else if (direction == "next") {
+                  document.getElementById("step"+curStep).style.display = "none";
+                  document.getElementById(nextpart).style.display = "block";
+                }
+              }
+
+            </script>
+
+            </div>
+          </li>
+          <!-- END OF ADDED CODE-->
+
+          <li>
+            <div class="collapsible-header active">
+              <span class="collapsible_logo">{ }</span>
+              <span class="translatable_arduinoSourceCode">Arduino Source Code</span>
+            </div>
+            <div class="collapsible-body">
+              <pre id="content_arduino" class="content content_height_transition content_arduino_large"></pre>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header" id="xml_collapsible_header">
+              <span class="collapsible_logo">&#60; &#62;</span>
+              <span class="translatable_blocksXml">Blocks XML</span>
+            </div>
+            <div class="collapsible-body" style="position:relative" id="xml_collapsible_body">
+              <a class="btn-floating btn-large waves-effect waves-light arduino_teal z-depth-1-half" id="button_load_xml"><i class="mdi-action-extension"></i></a>
+              <textarea id="content_xml" class="content content_height_transition content_xml_large" wrap="soft"></textarea>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- IDE Output content -->
+  <div class="ide_output_wrapper">
+    <ul class="collapsible ide_output_collapsible" data-collapsible="expandable">
+      <li>
+        <div id="ide_output_collapsible_header" class="collapsible-header ide_output_header_normal">
+          <i class="mdi-action-swap-vert Medium" style="font-size: 2.2rem;"></i>
+          <span class="translatable_arduinoOpMainTitle">Arduino IDE output</span>
+        </div>
+        <div class="collapsible-body">
+          <div id="content_ide_output" class="content"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="ide_output_spacer"></div>
+
+  <!-- Settings: Displayed as a Materialize Modal -->
+  <div id="settings_dialog" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4><span class="translatable_settings">Settings</span></h4>
+      <div class="modal_section">
+        <label><span class="translatable_compilerLocation">Compiler Location</span>:</label>
+        <input type="text" id="settings_compiler_location">
+      </div>
+      <div class="modal_section">
+        <label><span class="translatable_sketchFolder">Sketch Folder</span>:</label>
+        <input type="text" id="settings_sketch_location">
+      </div>
+      <div class="modal_section">
+        <label><span class="translatable_arduinoBoard">Arduino Board</span>:</label>
+        <select name="settings_board" id="board">
+          <option value="uno" class="translatable_arduinoBoardDefault">Arduino Board unknown</option>
+        </select>
+      </div>
+      <div class="modal_section">
+        <label><span class="translatable_comPort">COM Port<span>:</label>
+        <select name="settings_serial" id="serial_port">
+          <option value="COMX" class="translatable_comPortDefault">COM Port unknown</option>
+        </select>
+      </div>
+      <div class="modal_section">
+        <label><span class="translatable_defaultIdeButton">Default IDE button</span>:</label>
+        <select name="settings_ide" id="ide_settings">
+          <option value="verify" class="translatable_defaultIdeButtonDefault">IDE options unknown</option>
+        </select>
+      </div>
+      <div class="modal_section">
+        <label><span class="translatable_language">Language</span>:</label>
+        <select name="settings_language" id="language"></select>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Return</span></a>
+    </div>
+  </div>
+
+  <!-- Select Additional Blocks menu -->
+  <div id="blocks_menu" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div>
+        <h4><span class="translatable_addBlocksTitle">Additional Blocks</span></h4>
+      </div>
+      <div id="blocks_menu_body"></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Return</span></a>
+    </div>
+  </div>
+
+  <!-- General Alert: Content is loaded using JavaScript to display alerts -->
+  <div id="gen_alert" class="modal modal_small modal-fixed-footer">
+    <div class="modal-content">
+      <h5 id="gen_alert_title">Empty Alert</h4>
+      <p><span id="gen_alert_body">Empty alert text</span></p>
+    </div>
+    <div class="modal-footer">
+      <a id="gen_alert_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_okay">Okay</span></a>
+      <a id="gen_alert_cancel_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_cancel">Cancel</span></a>
+    </div>
+  </div>
+
+  <!-- Prompt: Content is loaded using JavaScript to display input prompt -->
+  <div id="gen_prompt" class="modal modal_small modal-fixed-footer">
+    <div class="modal-content">
+      <p><span id="gen_prompt_message">Prompt message</span></p>
+      <p><input id="gen_prompt_input" value="test" /></p>
+    </div>
+    <div class="modal-footer">
+      <a id="gen_prompt_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_okay">Okay</span></a>
+      <a id="gen_prompt_cancel_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_cancel">Cancel</span></a>
+    </div>
+  </div>
+
+  <!-- Local Modal to be shown if Ardublockly Server is not running. -->
+  <div id="not_running_dialog" class="modal">
+    <div class="modal-content">
+      <div>
+        <h4 id="gen_alert_title"><span class="translatable_noServerTitle">Ardublockly app not running</span></h4>
+      </div>
+      <div class="translatable_noServerBody">
+        <p>For all the Ardublockly features to be enabled, the Ardublockly desktop application must be running locally on your computer.</p>
+        <p>If you are using an online version you will not be able to configure the settings nor load the blocks code into an Arduino.</p>
+        <p>Installation instruction can be found in the <a href="https://github.com/carlosperate/ardublockly">Ardublockly repository</a>.</p>
+        <p>If you have Ardublockly already installed, make sure the application is running correctly.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="gen_alert_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_okay">Okay</span></a>
+    </div>
+  </div>
+
+  <!-- Desktop version of Ardublockly JS, needs to be loaded first. -->
+  <script src="ardublockly_desktop.js"></script>
+  <!-- jQuery and Materialize JS -->
+  <script src="js_libs/jquery-2.1.3.min.js"></script>
+  <script src="materialize/materialize.js"></script>
+  <!-- FileSaver JS -->
+  <script src="js_libs/FileSaver.min.js"></script>
+  <!-- JS Diff -->
+  <script src="js_libs/diff.js"></script>
+  <!-- Prettify JS -->
+  <script src="prettify/prettify.js"></script>
+  <!-- Ardublockly app -->
+  <script src="ardublocklyserver_ajax.js"></script>
+  <script src="ardublockly_lang.js"></script>
+  <script src="ardublockly_design.js"></script>
+  <script src="ardublockly_toolbox.js"></script>
+  <script src="ardublockly_blockly.js"></script>
+  <script src="ardublockly.js"></script>
+  <script>
+    window.addEventListener('load', function load(event) {
+      window.removeEventListener('load', load, false);
+      Ardublockly.init();
+    });
+  </script>
+</body>
+</html>

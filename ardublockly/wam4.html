@@ -70,7 +70,7 @@
     <div class="nav-wrapper container">
       <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <a id="logo-container" class="brand-logo">
-        <a href="index.html"><span class="app_title translatable_title">Ardublockly lesson 1: </span></a>
+        <a href="index.html"><span class="app_title translatable_title">Whack-a-Mole lesson 4: </span></a>
         <!-- Sketch name editable text field -->
         <span class="sketch_name_wrapper">
           <i class="mdi-image-edit sketch_name_icon"> </i>
@@ -97,11 +97,15 @@
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
         <!-- ADD NEW LINKS BELOW HERE -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
-        <li id="features"><a href="features.html" target="_blank">list of features</a></li>
-        <li id="template"><a href="template.html" target="_blank">template</a></li>
-        <li id="lesson1"><a href="wam1old.html" target="_blank">Lesson 1(old)</a></li>
-        <li id="lesson1"><a href="wamintro.html" target="_blank">Introduction</a></li>
+        <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
+        <li id="lesson2"><a href="wam2.html" target="_blank">Lesson 2</a></li>
+        <li id="lesson3"><a href="wam3.html" target="_blank">Lesson 3</a></li>
+        <li id="lesson4"><a href="wam4.html" target="_blank">Lesson 4</a></li>
+        <li id="lesson5"><a href="wam5.html" target="_blank">Lesson 5</a></li>
+        <li id="lesson6"><a href="wam6.html" target="_blank">Lesson 6</a></li>
+        <li id="lesson7"><a href="wam7.html" target="_blank">Lesson 7</a></li>
+        <li id="lesson8"><a href="wam8.html" target="_blank">Lesson 8</a></li>
       </ul>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
@@ -197,7 +201,7 @@
                 We now can turn the leds on and make them go off by pushing a button, but we don’t want the LEDS to burn the whole game.  <br>
                 We want the LEDS to burn for a certain time interval. <br>
                 We are going to try this in this lesson.
-               <br><br>
+                <br><br>
                 <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
                 (1/5)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
@@ -240,7 +244,7 @@
                 <button id="next" onclick="changeStep(4, 'next')">next</button>
             </div>
 
-          
+            <div id="step5" style="display:none">
                 <i>If you're all done, you can check the answer using the left button and move on to lesson  by pressing the right button:</i><br>
                 <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
                 <div id="modalAnswer" class="modal">
@@ -248,7 +252,7 @@
                     <span class="close" onclick="closeModal('modalAnswer')">&times;</span>
                     <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
                     <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
-                    <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson1.xml'), closeModal('modalAnswer')">Show me the answer</button>
+                    <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson4.xml'), closeModal('modalAnswer')">Show me the answer</button>
                   </div>
                 </div>
 
@@ -260,9 +264,9 @@
                     <button><a href="wam5.html" target="_blank">Move to lesson 5!</a></button>
                   </div>
                 </div>
-                <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
+                <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
                 (5/5)
-            </div>
+              </div>
             
             <script>
             

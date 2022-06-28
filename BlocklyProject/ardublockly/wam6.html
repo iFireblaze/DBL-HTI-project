@@ -193,21 +193,60 @@
             
             <!--IMAGES AND BUTTONS -->
             <div id="step1" style="display:block">
-                Hello! In this lesson we will combine previous things you've learnt: the waiting function and pressing the button.<br>
-                The goal is:<br>
-                <b>The LED is on. When the button is pressed, it turns off for 2 seconds and then it turns on again.</b><br><br>
-                Try it out for yourself first. If you get stuck, you can click the hints below!
-                <details>
-                <summary>Hint 1:</summary>
-                <p>First, think of what the Arduino needs to do first. What is its <i>initial condition</i>?</p>
-                </details>
-                <details>
-                    <summary>Hint 2:</summary>
-                    <p><b>If</b> the button is pressed, <b>then</b> the light will turn off. It then <b>waits</b> for 2 seconds and turns on again.</p>
-                    </details>
-                    <img src="img\Matrixspul.jpeg" alt="cool matrix image" width="400"><br>
+                Hey there! In this lesson we will look at a new type of loop function which stops after a certain time instead of looping forever.<br>
+                The block reads:<br>
+                <img src="img\block-repeat-times.png" alt="repeat times" width="200"><br>
 
-                
+                In the blank, you can put a certain number or a <i>variable</i>. <br>A variable is something with a name like 'x' which has a value that you can <b>change</b> like 'x=2'.
+                <br>You can set the value of a variable with the block:<br>
+                <img src="img\block-set-to.png" alt="set to" width="200"><br>
+                <i>Continue to the next step.</i><br>
+                <button id="next" onclick="changeStep(1, 'next')">next</button>
+            </div>
+
+            <div id="step2" style="display:none">
+                With these new blocks, try to make this:<br>
+                    <b>When the program runs, it turns a LED ON for 1 second and then OFF for 1 second. It repeats this 'x' times, where 'x' equals 5.</b><br><br>
+                Don't be afraid to play around with the numbers: <br>change how long the light is on or how often it repeats!
+                <details>
+                    <summary><i>Click here if you need a hint!</i></summary>
+                    <p>no hint for you lmao</p>
+                    </details>
+                    <br>
+                    <i>Go to the next step.</i><br>
+                <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
+                (2/4)
+                <button id="next" onclick="changeStep(2, 'next')">next</button>
+              </div>
+
+
+              <div id="step3" style="display:none">
+                For this exercise we need 2 more new blocks:
+                With the block:<br>
+                <img src="img\block-random-integer.png" alt="random integer" width="250"><br>
+                you can get a randomized number in a certain range.
+                With the block:<br>
+                <img src="img\block-break-loop.png" alt="break loop" width="250"><br>
+                you can stop a loop even when it's not finished yet.<br>
+                <i>Go to the next step for the final exercise!</i><br>
+                <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
+                (3/4)
+                <button id="next" onclick="changeStep(3, 'next')">next</button>
+              </div>
+
+              <div id="step4" style="display:none">
+                Now we're gonna work on the next step.<br>
+                The goal is:<br>
+                <b>Turning on the LED and turning it off for 3 seconds when the button is pressed or when a random timelimit is reached.</b><br><br>
+                Let's start by setting a variable called 'loops' to a random number between 30 000 and 32 000. This number will be the amount of times the loop will be repeated.<br><br>
+                The <i>repeat [] times</i> loop will be used to measure the time. The program will check every <b>50 microseconds</b> whether the button is pressed or not.<br><br>
+                The loop will end when the time (the amount of 'loops' multiplied by 50 microseconds) is over, or when it notices the button is pressed.<br><br>
+                When the loop ends one way or another, the LED will turn off for 3 seconds and everything starts again.<br>
+                <details>
+                    <summary><i>If you're having trouble, click here for a hint!</i></summary>
+                    <p>no hint for you lmao</p>
+                    </details>
+                    
               <button id="myBtn" onclick="openModal('myModal')">Open Modal</button>
 
               <!-- The Modal -->
@@ -221,14 +260,37 @@
                 </div>
 
               </div>
+
               <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button>
               <div id="secModal" class="modal">
                 <div class="modal-content">
                   <span class="close" onclick="closeModal('secModal')">&times;</span>
                   <img src="img/feedpos.png" alt="positive feedback" width="500" height="333">
-                  <button><a href="wam6.html" target="_blank">Move to next lesson!</a></button>
+                  <button><a href="wam1.html" target="_blank">Move to next lesson!</a></button>
                 </div>
+                </div><br>
+                <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
+                (4/4)
               </div>
+
+
+
+            <!-- CODE TO MOVE BETWEEN DIVs -->
+            <script>
+
+            function changeStep(curStep, direction) {
+              var nextpart = "step"+(curStep+1);
+              var prevpart = "step"+(curStep-1);
+              if (direction == "prev") {
+                document.getElementById("step"+curStep).style.display = "none";
+                document.getElementById(prevpart).style.display = "block";
+              } else if (direction == "next") {
+                document.getElementById("step"+curStep).style.display = "none";
+                document.getElementById(nextpart).style.display = "block";
+              }
+            }
+
+            </script>
             </div>
           </li>
 

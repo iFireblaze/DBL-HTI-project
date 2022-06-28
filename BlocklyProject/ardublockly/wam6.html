@@ -212,8 +212,22 @@
                     <summary><i>Click here if you need a hint!</i></summary>
                     <p>no hint for you lmao</p>
                     </details>
+
                     <br>
                     <i>Go to the next step.</i><br>
+
+                  <button id="myBtn" onclick="openModal('myModal')">Open Modal</button>
+ 
+              <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('myModal')">&times;</span>
+                  <p>Are you sure you are ready to check the answers? if so click on the button</p>
+                  <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson6.1.xml'), closeModal('myModal')">Opens XML file and closes modal</button>
+                </div>
+
+
+              </div>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/4)
                 <button id="next" onclick="changeStep(2, 'next')">next</button>

@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#00878F">
   <link rel="icon" href="img/favicon.ico">
   <title class="translatable_title">Ardublockly</title>
-
   <!-- Materialize, Prettify, and Ardublockly CSS -->
   <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
   <link rel="stylesheet" href="prettify/arduino.css">
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
+  <link href="test.css" rel="stylesheet" type="text/css">
 
   <!-- ADDED STYLESHEET AND CODE -->
   <script src="test.js"></script>
@@ -70,10 +70,10 @@
     <div class="nav-wrapper container">
       <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <a id="logo-container" class="brand-logo">
-        <span class="app_title translatable_title">Whack-a-Mole lesson 5: </span>
+        <a href="index.html"><span class="app_title translatable_title">Whack-a-Mole lesson 5: </span></a>
         <!-- Sketch name editable text field -->
         <span class="sketch_name_wrapper">
-          <i class="mdi-image-edit sketch_name_icon"></i>
+          <i class="mdi-image-edit sketch_name_icon"> </i>
           <input id="sketch_name" class="sketch_name" type="text">
         </span>
       </a>
@@ -177,7 +177,7 @@
             </div>
           </div>
         </div>
-        <!-- Blockly Panel -->
+        <!-- Blockly Panel (panel rechts) -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
             <div id="content_blocks" class="content z-depth-1"></div>
@@ -186,48 +186,44 @@
       </div>
       <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
+          
+          <!-- ADDS TEXT BOARD-->
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
               <span class="translatable_arduinoSourceCode">Instructions</span>
             </div>
 
-            <!-- NO MORE DROPBOX, IF YOU NEED IT ADDED BACK IN LET ME KNOW -->
             <div class="collapsible-body">
-            
-            <div id="step1" style="display:block">
-                Hello! In this lesson we will combine previous things you've learnt: the waiting function and pressing the button.<br>
+
+              <div id="step1" style="display:block">
+                <b>Combining what you've learnt</b><br>
+                In this lesson we will combine previous things you've learnt: the waiting function and pressing the button.<br><br>
                 The goal is:<br>
                 <b>The LED is on. When the button is pressed, it turns off for 2 seconds and then it turns on again.</b><br><br>
                 Try it out for yourself first. If you get stuck, you can click the hints below!
                 <details>
-                <summary>Hint 1:</summary>
-                <p>First, think of what the Arduino needs to do first. What is its <i>initial condition</i>?</p>
+                  <summary><i>Hint 1:</i></summary>
+                  <p>First, think of what the Arduino needs to do first. What is its <i>initial condition</i>?</p>
                 </details>
                 <details>
-                  <summary>Hint 2:</summary>
+                  <summary><i>Hint 2:</i></summary>
                   <p><b>If</b> the button is pressed, <b>then</b> the light will turn off. It then <b>waits</b> for 2 seconds and turns on again.</p>
-                </details>
-              <button id="next" onclick="changeStep(1, 'next')">next</button>
-            </div>
+                </details><br>
+                <img src="img\Matrixspul.jpeg" alt="cool matrix image" width="400"><br><br>
 
-            <div id="step2" style="display:none">
-                
-              <button id="myBtn" onclick="openModal('myModal')">Open Modal</button>
-
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-
-                <!-- Modal content HIERIN ZIT DE CONTENT DIE JE EDIT-->
-                <div class="modal-content">
-                  <span class="close" onclick="closeModal('myModal')">&times;</span>
-                  <p>Are you sure you are ready to check the answers? If so click on the button</p>
-                  <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson5.xml'), closeModal('myModal')">Opens XML file and closes modal</button>
+                <i>If you're all done, you can check the answer using the left button and move on to lesson 6 by pressing the right button:</i><br>
+                <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
+                <div id="modalAnswer" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modalAnswer')">&times;</span>
+                    <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
+                    <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
+                    <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson5.xml'), closeModal('modalAnswer')">Show me the answer</button>
+                  </div>
                 </div>
 
-              </div>
-
-              <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br>
+                <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br>
                 <div id="secModal" class="modal">
                   <div class="modal-content">
                     <span class="close" onclick="closeModal('secModal')">&times;</span>
@@ -244,31 +240,11 @@
                   </div>
                 </div>
 
-              <br>
-              <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
-              (2/2)
-            </div>
+              </div>
 
-            <!-- CODE TO MOVE BETWEEN DIVs -->
-            <script>
-
-            function changeStep(curStep, direction) {
-              var nextpart = "step"+(curStep+1);
-              var prevpart = "step"+(curStep-1);
-              if (direction == "prev") {
-                document.getElementById("step"+curStep).style.display = "none";
-                document.getElementById(prevpart).style.display = "block";
-              } else if (direction == "next") {
-                document.getElementById("step"+curStep).style.display = "none";
-                document.getElementById(nextpart).style.display = "block";
-              }
-            }
-
-            </script>
             </div>
           </li>
-
-          <!-- EINDE VAN TOEGEVOEGDE CODE -->
+          <!-- END OF ADDED CODE-->
 
           <li>
             <div class="collapsible-header active">
@@ -420,7 +396,7 @@
   <script src="ardublocklyserver_ajax.js"></script>
   <script src="ardublockly_lang.js"></script>
   <script src="ardublockly_design.js"></script>
-  <script src="../blockly/Toolboxes/Lesson 5.js"></script>
+  <script src="../blockly/Toolboxes/ardublockly_toolbox_5.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>
   <script>
@@ -430,4 +406,5 @@
     });
   </script>
 </body>
+
 </html>

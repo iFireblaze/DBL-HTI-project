@@ -356,14 +356,23 @@
                 </div>
             </div>
 
-          <button id="myBtn" onclick="openModal('modalNext')">Go to the next lesson</button><br>
-          <div id="modalNext" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal('modalNext')">&times;</span>
-              <img src="img/feedpos.png" alt="positive feedback" width="500" height="333">
-              <button><a href="wam8.html" target="_blank">Move to lesson 8!</a></button>
+            <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br>
+            <div id="secModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal('secModal')">&times;</span>
+                <p>Have you checked if your program works? If you're stuck check out the hints or the answer. When you're ready to continue, press the button below.</p>
+                <div class="popup" id="popup-1">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <div class="close-btn" onclick="togglepopup()">&times;</div>
+                    <img src="img/feedpos.png" alt="positive feedback" width="333" height="333">
+                    <button><a href="wam8.html" target="_blank">Move to next lesson!</a></button>
+                  </div>
+                </div>
+                <button onclick="togglepopup()">I'm all done!</button>
+              </div>
             </div>
-          </div>
+
           <button id="prev" onclick="changeStep(10, 'prev')">previous</button>
           (10/10)
       </div>
@@ -538,7 +547,7 @@
   <script src="ardublocklyserver_ajax.js"></script>
   <script src="ardublockly_lang.js"></script>
   <script src="ardublockly_design.js"></script>
-  <script src="ardublockly_toolbox.js"></script>
+  <script src="../blockly/Toolboxes/Lesson 7.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>
   <script>

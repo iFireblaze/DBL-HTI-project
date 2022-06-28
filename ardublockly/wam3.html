@@ -200,14 +200,14 @@
                 <b>Lesson 3 Pressing the button</b><br>
                 In the previous lesson you learned to turn the led off when you press the button. <br>
                 In our whack a mole game we have 5 leds. <br>
-                Question: How would you do the same thing you did in the previous lesson for LED 2 and button 2? <br>
-                Try it yourself
+                Question: How would you do the same thing you did in the previous lesson for LED 2 and button 2? <br><br>
+                <b>Try it yourself</b><br><br>
                 <details>
-                  <summary>For a hint, click here!:</summary>
+                  <summary><i>For a hint, click here!:</i></summary>
                   <p>Change the number of the LED and the button from 1 to 2</p>
-                </details><br>
-                <br><br>
-                <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
+                </details>
+                <br>
+                <i>Go to the next step.</i><br>
                 (1/4)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
             </div>
@@ -216,11 +216,9 @@
               <b>Question</b><br>
               What would happen if you would only change the number of the LED?
               <details>
-                <summary>For a hint, click here!:</summary>
+                <summary><i>For a hint, click here!</i></summary>
                 <p>The LEDs are connected to the wrong buttons and the wrong LED will turn of when you push a button</p>
               </details><br>
-              <br><br>
-              <br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/4)
@@ -228,13 +226,12 @@
             </div>
 
             <div id="step3" style="display:none">
-              <b>Step 2</b>
-              We need to make sure all the LEDS and BUTTONS are connected in pairs. But no need to make the whole code again! <br>
+              <b>Step 2</b><br>
+              We need to make sure all the LEDS and BUTTONS are connected in pairs. But no need to make the whole code again! <br><br>
               You can copy the code of one pair and adjust it to a new pair.<br>
               Try to select the code that you want to copy and copy it by pressing ctrl + c simultaneously then paste it
-              by pressing ctrl + v <br>
-              Do this for all the button LED pairs. <br>
-
+              by pressing ctrl + v <br><br>
+              Do this for all the button LED pairs. <br><br>
               <i>Go to the next step to finish this lesson!</i><br>
               <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
               (3/4)
@@ -245,8 +242,7 @@
             <div id="step4" style="display:none">
               <br>
                 <img src="img\run.png" alt="button to run your code"><br>
-                You can now tedst your code in Arduino. Upload it like you learned in the first lesson!
-                <br>
+                You can now test your code in Arduino. Upload it like you learned in the first lesson!<br><br>
                 
                 <i>If you're all done, you can check the answer using the left button and move on to lesson 2 by pressing the right button:</i><br>
                 <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
@@ -259,7 +255,7 @@
                   </div>
                 </div>
 
-                <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br>
+                <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br><br>
                 <div id="secModal" class="modal">
                   <div class="modal-content">
                     <span class="close" onclick="closeModal('secModal')">&times;</span>

@@ -198,11 +198,10 @@
 
             <div id="step1" style="display:block">
                 <b>Lesson 4: Let the Led burn for a certain time</b><br>
-                We now can turn the leds on and make them go off by pushing a button, but we don’t want the LEDS to burn the whole game.  <br>
+                We now can turn the leds on and make them go off by pushing a button, but we don’t want the LEDS to burn the whole game.<br><br>
                 We want the LEDS to burn for a certain time interval. <br>
-                We are going to try this in this lesson.
-                <br><br>
-                <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
+                We are going to try this in this lesson.<br><br>
+                <i>Go to the next step.</i><br>
                 (1/5)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
             </div>
@@ -212,7 +211,7 @@
               Try to turn on the LED then let it wait for a time interval of 2000 microseconds to turn it off. <br>
               For this you can use the ‘wait’ block.<br>
               Then the program will wait and then perform the next action. 
-                <!--<img src="img\WAIT-BLOCK.png" alt="Wait block"><br>-->
+                <img src="img\WAIT-BLOCK.png" alt="Wait block"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/5)
@@ -220,11 +219,11 @@
             </div>
 
             <div id="step3" style="display:none">
-              <b>Question</b>
-              Question 
-              What would happen if you change the number of microseconds?
+              <b>Question</b><br>
+              Question:
+              What would happen if you change the number of microseconds?<br>
               <details>
-                <summary>For a hint, click here!:</summary>
+                <summary><i>For a hint, click here!:</i></summary>
                 <p>It would wait for that number of microseconds. 1000 microseconds equals 1 second so 2000 microseconds equals 2 seconds</p>
               </details><br>
             
@@ -235,10 +234,11 @@
             </div>
 
             <div id="step4" style="display:none">
-                <b>Upload code to the Arduino</b>
+                <b>Upload code to the Arduino</b><br>
                 You are all done for this lesson and you can now test your code in Arduino! <br>
                 You can also try different seconds and try if you see the difference.
-                <br>
+                <br><br>
+                <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/5)
                 <button id="next" onclick="changeStep(4, 'next')">next</button>
@@ -256,7 +256,7 @@
                   </div>
                 </div>
 
-                <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br>
+                <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br><br>
                 <div id="secModal" class="modal">
                   <div class="modal-content">
                     <span class="close" onclick="closeModal('secModal')">&times;</span>

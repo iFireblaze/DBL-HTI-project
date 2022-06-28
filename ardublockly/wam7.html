@@ -204,7 +204,7 @@
                 We now want the program to do this for all led and buttons. <br> 
                 In this lesson, we are setting this up for all LED button combos and we learn how to create a function.<br>
 
-                <img src="img\lesson7-intro.png" alt="You've got this" width="300"><br>
+                <img src="img\lesson7-intro.png" alt="You've got this" width="300"><br><br>
                 <i>Proceed to step 2. </i><br>
                 <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
                 (1/10)
@@ -218,11 +218,11 @@
                 <b>Question :</b><br>
                 What should the range be in which we pick a random integer for our LED?<br><br>
                 <details>
-                  <summary>For the answer, click here!</summary>
+                  <summary><i>For the answer, click here!</i></summary>
                   <p>1 till 5, we have 5 button-LED combos. Therefore we pick a random number from 1 to 5 and turn the LED with this number on.<br></p>
                 </details><br>
         
-                <img src="img\schematicview.png" alt="Arduino" width="300"><br>
+                <img src="img\schematicview.png" alt="Arduino" width="300"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/10)
@@ -233,10 +233,10 @@
                 <b>Set LED to random</b> <br>
                 We will choose this random LED before we are going into our loop of checking if a button is pressed. <br>
                 So start setting the loops to a random integer.<br>
-                Then pick a random integer for a random button number and set this to the variable ‘buttoncombo’. <br>
-  <!-- pas plaatje aan -->
+                Then pick a random integer for a random button number and set this to the variable ‘buttoncombo’. <br><br>
+                <!-- Do we still do this? I would scrap it since we have little time -->
                 <!-- <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br> -->
-                Proceed to the next step.<br>
+                <i>Proceed to the next step.</i><br>
                 <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
                 (3/10)
                 <button id="next" onclick="changeStep(3, 'next')">next</button>
@@ -252,7 +252,8 @@
                 We want to let the program perform this task for the LED BUTTON 2 combo if 2 is chosen etc.<br>
                 Proceed to step 5 to learn more about the if/else funtion. <br>
 
-                <img src="img\lesson7-step4.png" alt= "blocks so far" width="400"><br>
+                <img src="img\lesson7-step4.png" alt= "blocks so far" width="400"><br><br>
+                <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/10)
                 <button id="next" onclick="changeStep(4, 'next')">next</button>
@@ -263,8 +264,8 @@
                 When we use the "if/else" block we actually let the program check the first 'if' condition then he checks the 'else if' condition and then the next 'else if' condition and so on.<br> 
                 If a condition is met the code in that 'else if' is executed, and it stops checking the other conditions if no loop is implemented.<br>
                 If no condition is met he just stops the loops and does nothing.<br><br>
-                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br>
-                
+                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br><br>
+                <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
                 (5/10)
                 <button id="next" onclick="changeStep(5, 'next')">next</button>
@@ -280,8 +281,8 @@
                 3. else if ‘buttoncombo’ equals 3, turn on LED 3. (Checks if button 3 is pressed) <br><br>
                 4. else if ‘buttoncombo’ equals 4, turn on LED 4. (Checks if button 4 is pressed) <br><br>
                 5. else if ‘buttoncombo’ equals 5, turn on LED 5. (Checks if button 5 is pressed) <br><br>
-                </i><br>
-                Proceed to the next step to implement these conditions. <br>
+                </i>
+                <i>Proceed to the next step to implement these conditions.</i><br>
                 <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
                 (6/10)
                 <button id="next" onclick="changeStep(6, 'next')">next</button>
@@ -293,7 +294,8 @@
               You already made this code for checking the button in the previous lesson!<br>
               You can if you like even just copy-paste the code with ctrl +c and change the numbers!<br><br>
               <img src="img\great-job.png" alt= "great-job" width="400"><br>
-              The function can now turn on a random LED and check if a certain button is pressed. <br> 
+              The function can now turn on a random LED and check if a certain button is pressed. <br><br>
+              <i>Go to the next step.</i><br>
               <button id="prev" onclick="changeStep(7, 'prev')">previous</button>
               (7/10)
               <button id="next" onclick="changeStep(7, 'next')">next</button>
@@ -306,8 +308,9 @@
               Now your loop is done, if no buttons are pressed, the LED is still on!<br>
               Therefore we let the function wait for 5000 microseconds again to then turn all the LEDs off so no LED will stay on.<br>
               For this we make a function to switch off all our LEDs at once in a separate code block.<br>
-              Proceed to step 9 to create this function.<br>
-              <img src="img\clock.png" alt= "clock" width="300"><br>
+              Proceed to step 9 to create this function.<br><br>
+              <img src="img\clock.png" alt= "clock" width="300"><br><br>
+              <i>Go to the next step.</i><br>
               <button id="prev" onclick="changeStep(8, 'prev')">previous</button>
               (8/10)
               <button id="next" onclick="changeStep(8, 'next')">next</button>
@@ -325,8 +328,8 @@
               Great job! You can now always use this function by symply using the block ‘turnOff’.<br>
               <img src="img\turn-off.png" alt= "turn-off" width="100"><br>
               Put the 'turn off' function block outside of your loop after you waited a few seconds.<br>
-              By doing this all the LEDs will turn off if there is no button pressed and it waited a while.<br>
-              <br>
+              By doing this all the LEDs will turn off if there is no button pressed and it waited a while.<br><br>
+              <i>Go to the next step.</i><br>
               <button id="prev" onclick="changeStep(9, 'prev')">previous</button>
               (9/10)
               <button id="next" onclick="changeStep(9, 'next')">next</button>
@@ -345,7 +348,7 @@
               <img src="img\whackamole.png" alt= "whack a mole" width="300"><br>
               Try out your code on the Arduino!<br> 
               If you're all done, you can check the answer using the left button. <br><br>
-              Move on to lesson 8, the last one!<br>
+              <i>Move on to lesson 8, the last one!</i><br>
               <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
               <div id="modalAnswer" class="modal">
                 <div class="modal-content">
@@ -356,7 +359,7 @@
                 </div>
             </div>
 
-            <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br>
+            <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br><br>
             <div id="secModal" class="modal">
               <div class="modal-content">
                 <span class="close" onclick="closeModal('secModal')">&times;</span>

@@ -205,7 +205,7 @@
                 and the losing function will be performed if the user doesn’t press the correct button or doesn’t press the button in time. <br>
                 We also let the program make a score that adds up if the user ‘wins’, so when the correct button is pressed. <br>
 
-                <img src="img\lesson8-mole.png" alt="mole" width="300"><br>
+                <img src="img\lesson8-mole.png" alt="mole" width="300"><br><br>
                 <i>Proceed to step 2. </i><br>
                 <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
                 (1/8)
@@ -217,8 +217,7 @@
                 In the "arduino run first" block, place the block "set score to 0". <br>
                 Here you make a variable score and it is set to zero. <br>
                 This will be your starting score. <br>
-                <img src="img\set-score-block.png" alt="Set score block" width="300"><br>
-                
+                <img src="img\set-score-block.png" alt="Set score block" width="300"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/8)
@@ -233,12 +232,8 @@
                 Make a winning function which you call "win".<br>
                 In this function, we want 5 tasks to be done.<br> 
                 See the next step for the functions. <br>
-
-
-
-  <!-- pas plaatje aan -->
-                <!-- <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br> -->
-                Proceed to the next step.<br>
+                <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br><br>
+                <i>Proceed to the next step.</i><br>
                 <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
                 (3/8)
                 <button id="next" onclick="changeStep(3, 'next')">next</button>
@@ -254,24 +249,25 @@
                 5. Give the user a message that he or she pushed the correct button in time.<br><br></i>
                 Try to perform the first 4 tasks yourself but if you struggle use one of the hints.<br><br>
                 <details>
-                  <summary>For a hint for task 1, click here!</summary>
+                  <summary><i>For a hint for task 1, click here!</i></summary>
                   <p>Create a variable ‘winnner’ with which you can set to ‘True’ or ‘False’. Use True because in this function he or she is a winner!<br>
                     <img src="img\lesson8-step1.png" alt= "blocks so far" width="300"><br></p>
                 </details><br>
                 <details>
-                  <summary>For a hint for task 2, click here!</summary>
+                  <summary><i>For a hint for task 2, click here!</i></summary>
                   <p>Use score+10!<br>
                     <img src="img\lesson8-step2.png" alt= "blocks so far" width="400"><br></p>
                 </details><br>
                 <details>
-                  <summary>For a hint for task 3, click here!</summary>
+                  <summary><i>For a hint for task 3, click here!</i></summary>
                   <p>Choose the correct LED and set it to high.<br></p>
                 </details><br>
                 <details>
-                  <summary>For a hint for task 4, click here!</summary>
+                  <summary><i>For a hint for task 4, click here!</i></summary>
                   <p>Use the function turnOff<br></p>
                 </details><br>
-                
+
+                <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/8)
                 <button id="next" onclick="changeStep(4, 'next')">next</button>
@@ -281,10 +277,9 @@
                 <b>Display some text. </b> <br>
                 Now we want to let the program display a text. You can do this by using the block ‘Serial print’. <br>
                 Then you can write your own text!<br> 
-<!-- voeg plaatje in 
-                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br>
-                 --><br>
-                 Implement this in your winning function as well.<br>
+                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br><br>
+                Implement this in your winning function as well.<br><br>
+                <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
                 (5/8)
                 <button id="next" onclick="changeStep(5, 'next')">next</button>
@@ -299,22 +294,22 @@
                 1. Turn off all the LEDs <br> <br>
                 2. Print a text that he didn’t push the correct button <br><br>
                 3. Make the red light turn on<br><br>
-                </i><br>
+                </i>
                 Try to implement the tasks yourself, if you struggle use one of the hints.<br><br>
                 <details>
-                  <summary>For a hint for task 1, click here!</summary>
+                  <summary><i>For a hint for task 1, click here!</i></summary>
                   <p>Use the turnOff function.<br></p>
                 </details><br>
                 <details>
-                  <summary>For a hint for task 2, click here!</summary>
+                  <summary><i>For a hint for task 2, click here!</i></summary>
                   <p>Print the text with the serial print block like in the previous lesson.<br></p>
                 </details><br>
                 <details>
-                  <summary>For a hint for task 3, click here!</summary>
+                  <summary><i>For a hint for task 3, click here!</i></summary>
                   <p>Choose the correct LED and set it to HIGH.<br></p>
                 </details><br>
 
-
+                <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
                 (6/8)
                 <button id="next" onclick="changeStep(6, 'next')">next</button>
@@ -327,7 +322,7 @@
               <b>Question:</b><br>
               When do we call the winning function?<br>
               <details>
-                <summary>For a hint, click here!</summary>
+                <summary><i>For a hint, click here!</i></summary>
                 <p>The winning function will be called when the correct button is pressed so in the loop. 
                   Instead of only turning the LED off, just use the win function.
                   <br></p>
@@ -336,14 +331,14 @@
               <b>Question:</b><br>
               When will the losing function be called?<br>
               <details>
-                <summary>For a hint, click here!</summary>
+                <summary><i>For a hint, click here!</i></summary>
                 <p>The losing function will be called outside the loop. 
                   First, you check if the winner is not set to true. 
                   This is something you did in the winning function. 
                   If this is indeed not the case you call the losing function.<br></p>
               </details><br>
-              Proceed to the last step to finish the wack a mole game!<br>
-              
+
+              <i>Proceed to the last step to finish the wack a mole game!</i><br>
               <button id="prev" onclick="changeStep(7, 'prev')">previous</button>
               (7/8)
               <button id="next" onclick="changeStep(7, 'next')">next</button>
@@ -367,7 +362,7 @@
                   <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson8.xml'), closeModal('modalAnswer')">Show me the answer</button>
                 </div>
             </div>
-            
+
           <button id="prev" onclick="changeStep(8, 'prev')">previous</button>
           (8/8)
         </div>

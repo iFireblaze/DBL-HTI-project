@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#00878F">
   <link rel="icon" href="img/favicon.ico">
-  <title class="translatable_title">Ardublockly</title>
+  <title class="translatable_title">Whack-a-Mole intro</title>
   <!-- Materialize, Prettify, and Ardublockly CSS -->
   <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
   <link rel="stylesheet" href="prettify/arduino.css">
@@ -98,9 +98,6 @@
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
         <!-- ADD NEW LINKS BELOW HERE -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
-        <li id="features"><a href="features.html" target="_blank">list of features</a></li>
-        <li id="template"><a href="template.html" target="_blank">template</a></li>
-        <li id="lesson1 old"><a href="wam1old.html" target="_blank">Lesson 1(old)</a></li>
         <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
         <li id="lesson2"><a href="wam2.html" target="_blank">Lesson 2</a></li>
@@ -209,11 +206,11 @@
                   <div class="modal-content">
                     <span class="close" onclick="closeModal('modalTinker')">&times;</span>
                     <b>Check out the interactive example below. If you want to you can also check out the design behind it by clicking the title "prototype v2"</b>
-                    <iframe width="725" height="453" src="https://www.tinkercad.com/embed/dVMTdoPAWWe?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
+                    <iframe width="750" height="500" src="https://www.tinkercad.com/embed/dVMTdoPAWWe?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br>
                   </div>
                 </div>
-                <b>Note:</b></i>If you get stuck at any lesson, don't worry! At the end of every lesson we'll provide an example file that you can use to continue to the next lesson.</i>
-                <i>Move onto the next step to get started! Use the dropdown menu to select step 2</i>
+                <b>Note:</b></i>If you get stuck at any lesson, don't worry! At the end of every lesson we'll provide an example file that you can use to continue to the next lesson.</i><br><br>
+                <i>Move onto the next step to get started! Use the button below to continue.</i>
                 <img src="img\whack-a-mole.png" alt="programming for beginners" width="400"><br>
                 (1/4)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
@@ -225,8 +222,8 @@
                 The provided Arduino has a bunch of cables attached to it. All these cables connect certain parts which are used for the game.<br><br>
                 The Arduino has blue LEDs (lights), buttons, and red and green LEDs attached to it. <br>
                 In the schematic beneath you can see how this all is connected.<br>
-                <img src="img\schematicview.png" alt="Schematic view of the arduino" width="400"><br>
-                <i>Now let's move onto the next step! Use the dropdown menu to select step 3.</i><br>
+                <img src="img\schematicview.png" alt="Schematic view of the arduino" width="400"><br><br>
+                <i>Now let's move onto the next step! Use the next button below to continue.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/4)
                 <button id="next" onclick="changeStep(2, 'next')">next</button>
@@ -240,8 +237,8 @@
                 In the left menu you can see the categories of blocks. <br><br>
                 Click on them and see what blocks pop up.<br>
                 As you can see there are a lot of types, don't be inimidated because of this. We'll explain the blocks step by step. <br><br>
-                <img src="img\block-categories.png" alt="Block categories" width="400"><br>
-                Now let's move onto the next step! Use the dropdown menu to select step 4. <br>
+                <img src="img\block-categories.png" alt="Block categories" width="400"><br><br>
+                Now let's move onto the next step! Use the next button below to continue.<br>
                 <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
                 (3/4)
                 <button id="next" onclick="changeStep(3, 'next')">next</button>
@@ -251,7 +248,7 @@
               <b>Excercise!</b><br>
               Notice how each block has a shape and how some shapes fit into each other? <br><br>
               Snap some blocks together (doesn't matter which ones) in the working space (white square in the middle) and see if they stick together.<br><br>
-              <img src="img\abstract-block.png" alt="Abstract blocks" width="400"><br>
+              <img src="img\abstract-block.png" alt="Abstract blocks" width="400"><br><br>
               <i>Once you get a feel for it, go ahead to lesson 1 and start the project.</i><br>
               <button id="myBtn" onclick="openModal('modalNext')">Go to the next lesson</button><br>
                 <div id="modalNext" class="modal">

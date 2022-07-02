@@ -197,10 +197,10 @@
             <div class="collapsible-body">
 
             <div id="step1" style="display:block">
-                <b> introduction </b><br>
-                In this lesson you are going to learn how to turn on an LED when pressing a button, and off when it is not pressed.<br>
+                <b>Introduction </b><br>
+                In this lesson you are going to learn how to turn on an LED when pressing a button, and off when it is not pressed.<br><br>
                 We make use of four different blocks in this assignment. Two blocks are already familiar from the former lesson. <br>
-                The “Arduino run first, Arduino loop forever” block and the “set digital pin to” block. The two newly introduced blocks are the “If, do, else” block and the “read digital pin#” block. 
+                The “Arduino run first, Arduino loop forever” block and the “Power LED .. to ..” block. The two newly introduced blocks are the “If, do, else” block and the “read button ..” block.<br><br> 
                 We will first introduce you to these two new blocks. <br>
                 <img src="img\led-green-on.png" alt="green LED" width="200"><br><br>
                 <i>Proceed to step 2. </i><br>
@@ -209,12 +209,12 @@
             </div>
 
             <div id="step2" style="display:none"> 
-                <b> introducing the “If, do, else” block. </b><br>
+                <b>Introducing the “If, do, else” block. </b><br>
                 This block actually says: “If this happens (if input), I will do this (do input).
-                If that is not happening, I will do the other thing (else input). <br>
-                We make use of this block to give the Arduino the command: <br>
-                “If the button is pushed (Pin #9), do turn on the LED (LOW), else turn off the LED (HIGH)."<br>
-                <img src="img\if-else-block.png" alt="if-else-block"><br><br>
+                If that is not happening, I will do the other thing (else input). <br><br>
+                We make use of this block to give the Arduino the command: 
+                “If the button is pushed, do turn on the LED, else turn off the LED."<br>
+                <img src="img\if-do-else-block.png" alt="if-do-else-block"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/5)
@@ -222,11 +222,11 @@
             </div>
 
             <div id="step3" style="display:none">
-              <b> introducting the “read digital pin #” block </b> <br>
-              This block is an pretty easy unstandable block. This block is used to read the input of a certain part on the Arduino. 
-              We make use of pin 9 (the first button), it reads whether the button is pushed or not. <br>
+              <b>Introducting the “Read button ..” block </b> <br>
+              This block is an pretty easy understandable block. This block is used to read the input of a certain button on the Arduino. <br>
+              We use the first button, it reads whether the button is pushed or not. <br>
 
-              <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br><br>
+              <img src="img\read-button-block.png" alt="read-button-block" width="200"><br><br>
               <i>Proceed to the excercise.</i><br>
               <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
               (3/5)
@@ -236,16 +236,17 @@
             <div id="step4" style="display:none">
                 <b>Excercise: Turning on the LED when the button is pressed, and off when it is not pressed. </b> <br>
                 In this excercise you must try to make a LED turn on when the button is pressed, and off when it is not pressed. <br>
-                Make use of the four introduced blocks. See the picture. <br>
+                Make use of the four introduced blocks. See the picture. <br><br>
                 First try to figure it out yourself by using the explanations of the blocks and the former excercise. <br>
-                If your think you got it try it out on the Arduino. If you forgot how check lesson 1. <br>
+                If your think you got it try it out on the Arduino. <br>
+                If you forgot how check lesson 1. <br><br>
                 <details>
                   <summary>For a hint, click here!</summary>
-                  <p>Loop forever: “If the button is pushed (Pin #9), do turn on the LED (LOW), else turn off the LED (HIGH)."<br></p>
+                  <p>Loop forever: “If the button is pushed (Button 1), do turn on the LED (ON), else turn off the LED (OFF)."<br></p>
                 </details><br>
 
                 <img src="img\think.png" alt= "think" width="180">
-                <img src="img\blocks-lesson-2.png" alt= "blocks lesson 2" width="200"><br><br>
+                <img src="img\blocks-lesson2.png" alt= "blocks lesson 2" width="200"><br><br>
                 <i>Continue to the next step</i><br>
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/5)
@@ -254,8 +255,8 @@
 
             <div id="step5" style="display:none">
                 <b>Extra excercise.</b> <br>
-                For the game wack a mole we need to make sure the light turns off when we press the button, this is the opposite of the former excercise.<br>
-                Can you make this happen? 
+                For the game wack a mole we need to make sure the light turns off when we press the button, this is the opposite of the former excercise.<br><br>
+                Can you make this happen? <br><br>
                 <details>
                   <summary>For a hint, click here!</summary>
                   <p>Loop forever: “If the button is pushed (Pin #9), do turn off the LED (LOW), else turn on the LED (HIGH)."<br></p>

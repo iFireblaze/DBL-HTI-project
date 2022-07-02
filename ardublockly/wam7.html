@@ -231,9 +231,9 @@
 
             <div id="step3" style="display:none">
                 <b>Set LED to random</b> <br>
-                We will choose this random LED before we are going into our loop of checking if a button is pressed. <br>
+                We will choose this random LED before we are going into our loop of checking if a button is pressed. <br><br>
                 So start setting the loops to a random integer.<br>
-                Then pick a random integer for a random button number and set this to the variable ‘buttoncombo’. <br><br>
+                Then pick a random integer for a random button number and set this to the variable ‘button’ (This block can be found in the menu). <br><br>
                 <!-- Do we still do this? I would scrap it since we have little time -->
                 <!-- <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br> -->
                 <i>Proceed to the next step.</i><br>
@@ -248,11 +248,11 @@
                 You can now start a loop<br><br>
                 <b>Example :</b><br>
                 We want to make different actions for every button that is chosen from the random integer.<br>
-                We want the program to perform the task learned in the previous lesson for "LED BUTTON 1 combo" if the ‘buttoncombo’ variable is 1.<br> 
+                We want the program to perform the task learned in the previous lesson for "LED BUTTON 1 combo" if the 'button' variable is 1.<br> 
                 We want to let the program perform this task for the LED BUTTON 2 combo if 2 is chosen etc.<br>
-                Proceed to step 5 to learn more about the if/else funtion. <br>
+                Proceed to step 5 to learn more about the if/else function. <br><br>
 
-                <img src="img\lesson7-step4.png" alt= "blocks so far" width="400"><br><br>
+                <img src="img\lesson7-step-4.png" alt= "blocks so far" width="400"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/10)
@@ -261,10 +261,10 @@
 
             <div id="step5" style="display:none">
                 <b>Introducing If/else</b> <br>
-                When we use the "if/else" block we actually let the program check the first 'if' condition then he checks the 'else if' condition and then the next 'else if' condition and so on.<br> 
+                When we use the "if/else" block we actually let the program check the first 'if' condition then he checks the 'else if' condition and then the next 'else if' condition and so on.<br><br> 
                 If a condition is met the code in that 'else if' is executed, and it stops checking the other conditions if no loop is implemented.<br>
                 If no condition is met he just stops the loops and does nothing.<br><br>
-                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br><br>
+                <img src="img\lesson7-step5.png" alt= "if-else" width="300"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
                 (5/10)
@@ -276,11 +276,11 @@
                 For the game Wack a mole we need the if/else function to check for five conditions. <br><br>
                 These are: <br>
                 <i>
-                1. if ‘buttoncombo’ equals 1, turn on LED 1. (Checks if button 1 is pressed) <br> <br>
-                2. else if ‘buttoncombo’ equals 2, turn on LED 2. (Checks if button 2 is pressed) <br><br>
-                3. else if ‘buttoncombo’ equals 3, turn on LED 3. (Checks if button 3 is pressed) <br><br>
-                4. else if ‘buttoncombo’ equals 4, turn on LED 4. (Checks if button 4 is pressed) <br><br>
-                5. else if ‘buttoncombo’ equals 5, turn on LED 5. (Checks if button 5 is pressed) <br><br>
+                1. if ‘button’ equals 1, turn on LED 1. (Checks if button 1 is pressed) <br> <br>
+                2. else if ‘button’ equals 2, turn on LED 2. (Checks if button 2 is pressed) <br><br>
+                3. else if ‘button’ equals 3, turn on LED 3. (Checks if button 3 is pressed) <br><br>
+                4. else if ‘button’ equals 4, turn on LED 4. (Checks if button 4 is pressed) <br><br>
+                5. else if ‘button’ equals 5, turn on LED 5. (Checks if button 5 is pressed) <br><br>
                 </i>
                 <i>Proceed to the next step to implement these conditions.</i><br>
                 <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
@@ -303,11 +303,11 @@
         
           <div id="step8" style="display:none">
               <b>Adding the wait function to your loop.</b> <br>
-              Like in the previous lesson we now want the function to wait a few seconds before performing the loop again.<br>
+              Like in the previous lesson we now want the function to wait a few seconds before performing the loop again.<br><br>
               Add the wait function in your loop.<br>
-              Now your loop is done, if no buttons are pressed, the LED is still on!<br>
+              Now your loop is done, if no buttons are pressed, the LED is still on!<br><br>
               Therefore we let the function wait for 5000 microseconds again to then turn all the LEDs off so no LED will stay on.<br>
-              For this we make a function to switch off all our LEDs at once in a separate code block.<br>
+              For this we make a function to switch off all our LEDs at once in a separate code block.<br><br>
               Proceed to step 9 to create this function.<br><br>
               <img src="img\clock.png" alt= "clock" width="300"><br><br>
               <i>Go to the next step.</i><br>
@@ -318,15 +318,15 @@
 
             <div id="step9" style="display:none">
               <b>Creating a function to turn off all the LEDs at once.</b> <br>
-              A function is a small program with one or multiple tasks in it. <br>
+              A function is a small program with one or multiple tasks in it.
               You can make it yourself and if you call the function, 
               all the tasks that you put into that function will be executed by the program. <br><br>
               Make a function with the word ‘to’ and call the function ‘turnOff’.<br>
               Make this a separate block from the rest of the program.<br>
               <b>Example:</b><br>
-              <img src="img\turn-off-function.png" alt= "turn-off-function" width="300"><br>
+              <img src="img\turnoff-function.png" alt= "turn-off-function" width="300"><br>
               Great job! You can now always use this function by symply using the block ‘turnOff’.<br>
-              <img src="img\turn-off.png" alt= "turn-off" width="100"><br>
+              <img src="img\turnoff.png" alt= "turn-off" width="100"><br>
               Put the 'turn off' function block outside of your loop after you waited a few seconds.<br>
               By doing this all the LEDs will turn off if there is no button pressed and it waited a while.<br><br>
               <i>Go to the next step.</i><br>

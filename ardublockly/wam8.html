@@ -202,7 +202,7 @@
                 If not then the LED eventually switches off. <br><br>
                 In this lesson, we will make a winning and losing function. <br>
                 The winning function will be performed if the user presses the correct button 
-                and the losing function will be performed if the user doesn’t press the correct button or doesn’t press the button in time. <br>
+                and the losing function will be performed if the user doesn’t press the correct button or doesn’t press the button in time. <br><br>
                 We also let the program make a score that adds up if the user ‘wins’, so when the correct button is pressed. <br>
 
                 <img src="img\lesson8-mole.png" alt="mole" width="300"><br><br>
@@ -214,10 +214,11 @@
 
             <div id="step2" style="display:none"> 
                 <b>Set the starting score.</b><br>
-                In the "arduino run first" block, place the block "set score to 0". <br>
+                In the "arduino run first" block, <br>
+                place the block "set score to 0". <br>
                 Here you make a variable score and it is set to zero. <br>
                 This will be your starting score. <br>
-                <img src="img\set-score-block.png" alt="Set score block" width="300"><br><br>
+                <img src="img\setscore-block.png" alt="Set score block" width="300"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/8)
@@ -231,8 +232,8 @@
                 Otherwise, you could always look back in lesson 7. <br><br>
                 Make a winning function which you call "win".<br>
                 In this function, we want 5 tasks to be done.<br> 
-                See the next step for the functions. <br>
-                <img src="img\read-digital-pin-block.png" alt="read-digital-pin-block" width="200"><br><br>
+                See the next step for the functions. <br><br>
+                
                 <i>Proceed to the next step.</i><br>
                 <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
                 (3/8)
@@ -247,21 +248,21 @@
                 3. Make the green light in the game turn on.<br><br>
                 4. turn off all the LEDS.<br><br>
                 5. Give the user a message that he or she pushed the correct button in time.<br><br></i>
-                Try to perform the first 4 tasks yourself but if you struggle use one of the hints.<br><br>
+                Try to perform the first 4 tasks yourself but if you struggle use one of the hints.<br>
                 <details>
                   <summary><i>For a hint for task 1, click here!</i></summary>
                   <p>Create a variable ‘winnner’ with which you can set to ‘True’ or ‘False’. Use True because in this function he or she is a winner!<br>
                     <img src="img\lesson8-step1.png" alt= "blocks so far" width="300"><br></p>
-                </details><br>
+                </details>
                 <details>
                   <summary><i>For a hint for task 2, click here!</i></summary>
                   <p>Use score+10!<br>
                     <img src="img\lesson8-step2.png" alt= "blocks so far" width="400"><br></p>
-                </details><br>
+                </details>
                 <details>
                   <summary><i>For a hint for task 3, click here!</i></summary>
                   <p>Choose the correct LED and set it to high.<br></p>
-                </details><br>
+                </details>
                 <details>
                   <summary><i>For a hint for task 4, click here!</i></summary>
                   <p>Use the function turnOff<br></p>
@@ -277,7 +278,7 @@
                 <b>Display some text. </b> <br>
                 Now we want to let the program display a text. You can do this by using the block ‘Serial print’. <br>
                 Then you can write your own text!<br> 
-                <img src="img\if-else-lesson7.png" alt= "if-else" width="300"><br><br>
+                <img src="img\serialprint.png" alt= "if-else" width="300"><br><br>
                 Implement this in your winning function as well.<br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
@@ -295,15 +296,15 @@
                 2. Print a text that he didn’t push the correct button <br><br>
                 3. Make the red light turn on<br><br>
                 </i>
-                Try to implement the tasks yourself, if you struggle use one of the hints.<br><br>
+                Try to implement the tasks yourself, if you struggle use one of the hints.<br>
                 <details>
                   <summary><i>For a hint for task 1, click here!</i></summary>
                   <p>Use the turnOff function.<br></p>
-                </details><br>
+                </details>
                 <details>
                   <summary><i>For a hint for task 2, click here!</i></summary>
                   <p>Print the text with the serial print block like in the previous lesson.<br></p>
-                </details><br>
+                </details>
                 <details>
                   <summary><i>For a hint for task 3, click here!</i></summary>
                   <p>Choose the correct LED and set it to HIGH.<br></p>

@@ -211,10 +211,10 @@
             <div id="step2" style="display:none"> 
               <b>Step 1</b><br>
                 Drag the "Arduino run first, arduino loop forever" block to the working space. You can find this block under the category 'Functions'. <br><br>
-                Now you will need to "click" another block in the block to turn an LED light on. This is done with the "Set digital pin to" block. <br>
-                This block enables to turn on or off a part of the Arduino connected to a certain 'pin' (space on the Arduino).<br>
-                For now we only want to turn on a LED. Therefore, we make use of pin 2 (LED 1) <br>
-                <img src="img\LED-block.png" alt="LED block"><br><br>
+                Now you will need to "click" another block in the block to turn an LED light on. This is done with the "Power LED .. to ..." block. <br>
+                This block enables to turn on or off an LED on the Arduino.<br>
+                For now we only want to turn on one LED. Therefore, we select LED 1 and connect the "ON" block to it. <br>
+                <img src="img\LED-ON-block.png" alt="LED block"><br><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/6)
@@ -223,10 +223,10 @@
 
             <div id="step3" style="display:none">
               <b>Step 2</b>
-              Drag the "Set digital pin to" block to the white canvas in the middle, and try to click it in the "Arduino run first, Arduino loop forever" block.<br>
+              Drag the "Power LED .. to .." block to the white canvas in the middle, and try to click it in the "Arduino run first, Arduino loop forever" block.<br>
               This Block has two input places (openings), put the block in the "run first" input place.<br>
-              Change the 0 in the block to a 2. In this way you select LED 1. Keep the second part of the block on HIGH (this means on, LOW means off).<br>
-              <img src="img\pro1par1im1.png" alt="how to change the pin num" width="200"><br>
+              Change the 0 in the block to a 1. In this way you select LED 1. Keep the second part of the block on ON (this means the LED must turn on).<br>
+              <img src="img\lesson1-block.png" alt="How to change LED" width="200"><br>
               That's it! Now all that's left is to put that code on the Arduino and let it perform the action.<br><br>
               <i>Go to the next step to finish this lesson!</i><br>
               <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
@@ -235,7 +235,7 @@
             </div>
 
             <div id="step4" style="display:none">
-                <b>Upload code to the Arduino</b>
+                <b>Upload code to the Arduino</b><br>
                 Finally, we get to put your code on the Arduino!<br>
                 This consists of two steps, first you verify your code. This is to check whether it works.
                 This is done by hovering over the play button in the upper-right, and then selecting the check mark.<br>
@@ -263,13 +263,13 @@
 
             <div id="step6" style="display:none">
               <b>Extra excercise</b><br>
-                You were able to turn on the first LED, can you also turn on the other lights? If you want to know which pins have a LED check the description in the introduction.<br><br>
+                You were able to turn on the first LED, can you also turn on the other lights? <br><br>
                 If you think you did it, try it out by uploading the code to the Arduino. <br><br> 
                 
                 Secondly, is it possible to turn on more lights at once? Try figuring it out and use the hint if you need it.<br><br>
                 <details>
                   <summary>For a hint, click here!:</summary>
-                  <p>Maybe if you give it multiple commands to do at once when it first runs? Maybe it's possible to click more blocks under the "set pin 2 to ..." block.</p>
+                  <p>Maybe if you give it multiple commands to do at once when it first runs? Maybe it's possible to click more blocks under the "Power LED .. to .." block.</p>
                 </details><br>
                 
                 <i>If you're all done, you can check the answer using the left button and move on to lesson 2 by pressing the right button:</i><br>

@@ -214,7 +214,7 @@ return Blockly.Types[a]}};
 Blockly.Blocks.turn_led_on={
   init:function(){this.setHelpUrl("http://arduino.cc/en/Reference/DigitalWrite");
   this.setColour(230);
-  this.appendValueInput("STATE").appendField("Power LED").appendField(new Blockly.FieldDropdown([['Led 2','2'],['Led 3','3'],['Led 4','4'],['Led 5','5'],['Led 6','6'],['Led 7','7'],['Led 8','8']]),"LED").appendField(Blockly.Msg.ARD_WRITE_TO).setCheck(Blockly.Types.BOOLEAN.checkList);
+  this.appendValueInput("STATE").appendField("Power LED").appendField(new Blockly.FieldDropdown([['Led Blue 1','2'],['Led Blue 2','3'],['Led Blue 3','4'],['Led Blue 4','5'],['Led Blue 5','6'],['Led Rood','7'],['Led Groen','8']]),"LED").appendField(Blockly.Msg.ARD_WRITE_TO).setCheck(Blockly.Types.BOOLEAN.checkList);
   this.setInputsInline(!1);this.setPreviousStatement(!0,null);this.setNextStatement(!0,null);
   this.setTooltip(Blockly.Msg.ARD_DIGITALWRITE_TIP)},
   updateFields:function(){Blockly.Arduino.Boards.refreshBlockFieldDropdown(this,"LED","digitalLED")}};

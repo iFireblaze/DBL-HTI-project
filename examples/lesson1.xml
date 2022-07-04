@@ -1,10 +1,10 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="arduino_functions" id="7+a(h-#GnbSpQ=4!U`RN" x="288" y="147">
-    <statement name="SETUP_FUNC">
-      <block type="io_digitalwrite" id="Vu!PWUB(mY/4r/`n_.|s">
-        <field name="PIN">2</field>
+    <statement name="LOOP_FUNC">
+      <block type="turn_led_on" id="6[/TKOL%TJbl!LWYr;(K">
+        <field name="LED">1</field>
         <value name="STATE">
-          <block type="io_highlow" id="vt)MWp:cE6xAvgoq#B.F">
+          <block type="ON_OFF" id="ox{K3Da;%_~V%Lh4E.,}">
             <field name="STATE">HIGH</field>
           </block>
         </value>

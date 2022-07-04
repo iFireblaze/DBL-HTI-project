@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
   <link href="test.css" rel="stylesheet" type="text/css">
 
-  <!-- ADDED STYLESHEET AND CODE -->
+  <!-- ADDED: CSS STYLESHEET AND CODE -->
   <script src="test.js"></script>
   <script src="modal.js"></script>
   <link href="test.css" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
         <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
         <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
-        <!-- ADD NEW LINKS BELOW HERE -->
+        <!-- ADDED CODE: NEW LINKS TO LESSONS -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
         <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
@@ -113,7 +113,6 @@
           <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
           <div class="collapsible-body">
             <ul>
-              <!-- NOT HERE, LEAVE THIS AS IT IS, IT BREAKS ARDUINO CODE OTHERWISE -->
               <li id="menu_example_1"><a href="#!">Blink</a></li>
               <li id="menu_example_2"><a href="#!">Serial print</a></li>
               <li id="menu_example_3"><a href="#!">Serial repeat game</a></li>
@@ -177,7 +176,7 @@
             </div>
           </div>
         </div>
-        <!-- Blockly Panel (panel rechts) -->
+        <!-- Blockly Panel (The panel on the right) -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
             <div id="content_blocks" class="content z-depth-1"></div>
@@ -187,7 +186,7 @@
       <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
           
-          <!-- ADDS TEXT BOARD-->
+          <!-- ADDED CODE: ADDS INSTRUCTIONS BOARD-->
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
@@ -196,7 +195,7 @@
 
             <div class="collapsible-body">
 
-            <div id="step1" style="display:block">
+              <div id="step1" style="display:block">
                 <b>Introduction lesson 8: Finalizing the game</b><br>
                 In the previous lesson, we learned to turn on a random LED and check if the button is pressed. <br>
                 If not then the LED eventually switches off. <br><br>
@@ -204,15 +203,14 @@
                 The winning function will be performed if the user presses the correct button 
                 and the losing function will be performed if the user doesn’t press the correct button or doesn’t press the button in time. <br><br>
                 We also let the program make a score that adds up if the user ‘wins’, so when the correct button is pressed. <br>
-
                 <img src="img\lesson8-mole.png" alt="mole" width="300"><br><br>
                 <i>Proceed to step 2. </i><br>
                 <button id="prev" onclick="changeStep(1, 'prev')">previous</button>
                 (1/8)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step2" style="display:none"> 
+              <div id="step2" style="display:none"> 
                 <b>Set the starting score.</b><br>
                 In the "arduino run first" block, <br>
                 place the block "set score to 0". <br>
@@ -223,9 +221,9 @@
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/8)
                 <button id="next" onclick="changeStep(2, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step3" style="display:none">
+              <div id="step3" style="display:none">
                 <b>Make the winning function.</b> <br>
                 Now we make a separate function again which we can call in our game.<br>
                 Do you still remember what a function does from the previous lesson? <br>
@@ -233,14 +231,13 @@
                 Make a winning function which you call "win".<br>
                 In this function, we want 5 tasks to be done.<br> 
                 See the next step for the functions. <br><br>
-                
                 <i>Proceed to the next step.</i><br>
                 <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
                 (3/8)
                 <button id="next" onclick="changeStep(3, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step4" style="display:none">
+              <div id="step4" style="display:none">
                 <b>Implementing the functions of the 'win' function</b><br>
                 <i>
                 1. Make the user a winner.<br><br>
@@ -252,12 +249,12 @@
                 <details>
                   <summary><i>For a hint for task 1, click here!</i></summary>
                   <p>Create a variable ‘winnner’ with which you can set to ‘True’ or ‘False’. Use True because in this function he or she is a winner!<br>
-                    <img src="img\lesson8-step1.png" alt= "blocks so far" width="300"><br></p>
+                  <img src="img\lesson8-step1.png" alt= "blocks so far" width="300"><br></p>
                 </details>
                 <details>
                   <summary><i>For a hint for task 2, click here!</i></summary>
                   <p>Use score+10!<br>
-                    <img src="img\lesson8-step2.png" alt= "blocks so far" width="400"><br></p>
+                  <img src="img\lesson8-step2.png" alt= "blocks so far" width="400"><br></p>
                 </details>
                 <details>
                   <summary><i>For a hint for task 3, click here!</i></summary>
@@ -267,14 +264,13 @@
                   <summary><i>For a hint for task 4, click here!</i></summary>
                   <p>Use the function turnOff<br></p>
                 </details><br>
-
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/8)
                 <button id="next" onclick="changeStep(4, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step5" style="display:none">
+              <div id="step5" style="display:none">
                 <b>Display some text. </b> <br>
                 Now we want to let the program display a text. You can do this by using the block ‘Serial print’. <br>
                 Then you can write your own text!<br> 
@@ -284,9 +280,9 @@
                 <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
                 (5/8)
                 <button id="next" onclick="changeStep(5, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step6" style="display:none">
+              <div id="step6" style="display:none">
                 <b>Create the losing function.</b> <br>
                 Now we create the losing function. <br>
                 This function will be performed if you don’t push a button at all or you didn’t push the correct button. <br>
@@ -309,70 +305,67 @@
                   <summary><i>For a hint for task 3, click here!</i></summary>
                   <p>Choose the correct LED and set it to HIGH.<br></p>
                 </details><br>
-
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
                 (6/8)
                 <button id="next" onclick="changeStep(6, 'next')">next</button>
-          </div>
+              </div>
 
-          <div id="step7" style="display:none">
-              <b>Call the created functions.</b> <br>
-              Now that these functions are created we want the program to perform the tasks in this function when ask for it. <br>
-              This is called: ‘To call a function’.<br><br>
-              <b>Question:</b><br>
-              When do we call the winning function?<br>
-              <details>
-                <summary><i>For a hint, click here!</i></summary>
-                <p>The winning function will be called when the correct button is pressed so in the loop. 
-                  Instead of only turning the LED off, just use the win function.
-                  <br></p>
-              </details><br>
+              <div id="step7" style="display:none">
+                <b>Call the created functions.</b> <br>
+                Now that these functions are created we want the program to perform the tasks in this function when ask for it. <br>
+                This is called: ‘To call a function’.<br><br>
+                <b>Question:</b><br>
+                When do we call the winning function?<br>
+                <details>
+                  <summary><i>For a hint, click here!</i></summary>
+                  <p>The winning function will be called when the correct button is pressed so in the loop. 
+                    Instead of only turning the LED off, just use the win function.
+                    <br></p>
+                </details><br>
+                <b>Question:</b><br>
+                When will the losing function be called?<br>
+                <details>
+                  <summary><i>For a hint, click here!</i></summary>
+                  <p>The losing function will be called outside the loop. 
+                    First, you check if the winner is not set to true. 
+                    This is something you did in the winning function. 
+                    If this is indeed not the case you call the losing function.<br></p>
+                </details><br>
+                <i>Proceed to the last step to finish the wack a mole game!</i><br>
+                <button id="prev" onclick="changeStep(7, 'prev')">previous</button>
+                (7/8)
+                <button id="next" onclick="changeStep(7, 'next')">next</button>
+              </div>
 
-              <b>Question:</b><br>
-              When will the losing function be called?<br>
-              <details>
-                <summary><i>For a hint, click here!</i></summary>
-                <p>The losing function will be called outside the loop. 
-                  First, you check if the winner is not set to true. 
-                  This is something you did in the winning function. 
-                  If this is indeed not the case you call the losing function.<br></p>
-              </details><br>
-
-              <i>Proceed to the last step to finish the wack a mole game!</i><br>
-              <button id="prev" onclick="changeStep(7, 'prev')">previous</button>
-              (7/8)
-              <button id="next" onclick="changeStep(7, 'next')">next</button>
-          </div>
-        
-          <div id="step8" style="display:none">
-              <b>The final game!</b> <br>
-              Lastly, a nice addition is to let the game print your score. <br>
-              You can use the Serial print again and use the variable score which is your current score!<br>
-              If you want to see this score, open the Arduino IDE and press the "Serial monitor" button.<br><br>
-              That's it! Do you think you've got the final game?<br>
-              Check your answer by verifying it and try to run it on the Arduino.<br>
-              Does it not work? No worries check your answer by pushing the button beneath, for the final answer. <br>
-              Enjoy playing your own created game: Whack a mole!<br><br>
-              <img src="img\whack-a-mole.png" alt= "whack a mole" width="300"><br><br>
-              <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button><br><br>
-              <div id="modalAnswer" class="modal">
-                <div class="modal-content">
-                  <span class="close" onclick="closeModal('modalAnswer')">&times;</span>
-                  <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
-                  <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
-                  <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson8.xml'), closeModal('modalAnswer')">Show me the answer</button>
+              <div id="step8" style="display:none">
+                <b>The final game!</b> <br>
+                Lastly, a nice addition is to let the game print your score. <br>
+                You can use the Serial print again and use the variable score which is your current score!<br>
+                If you want to see this score, open the Arduino IDE and press the "Serial monitor" button.<br><br>
+                That's it! Do you think you've got the final game?<br>
+                Check your answer by verifying it and try to run it on the Arduino.<br>
+                Does it not work? No worries check your answer by pushing the button beneath, for the final answer. <br>
+                Enjoy playing your own created game: Whack a mole!<br><br>
+                <img src="img\whack-a-mole.png" alt= "whack a mole" width="300"><br><br>
+                <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button><br><br>
+                <div id="modalAnswer" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modalAnswer')">&times;</span>
+                    <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
+                    <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
+                    <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson8.xml'), closeModal('modalAnswer')">Show me the answer</button>
+                  </div>
                 </div>
+                <button id="prev" onclick="changeStep(8, 'prev')">previous</button>
+                (8/8)
+              </div>
+              
             </div>
 
-          <button id="prev" onclick="changeStep(8, 'prev')">previous</button>
-          (8/8)
-        </div>
-      </div>
-
+            <!-- Script with code that changes between divs containing the instructions -->
             <script>
-            
-            function changeStep(curStep, direction) {
+              function changeStep(curStep, direction) {
                 var nextpart = "step"+(curStep+1);
                 var prevpart = "step"+(curStep-1);
                 if (direction == "prev") {
@@ -383,10 +376,10 @@
                   document.getElementById(nextpart).style.display = "block";
                 }
               }
-
             </script>
+
           </li>
-          <!-- END OF ADDED CODE-->
+          <!-- END OF ADDED INSTRUCTINOS BOARD-->
 
           <li>
             <div class="collapsible-header active">
@@ -538,6 +531,7 @@
   <script src="ardublocklyserver_ajax.js"></script>
   <script src="ardublockly_lang.js"></script>
   <script src="ardublockly_design.js"></script>
+  <!-- ADDED CODE: DIFFERENT TOOLBOX BASED ON CURRENT LESSON -->
   <script src="../blockly/Toolboxes/Lesson 8.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>

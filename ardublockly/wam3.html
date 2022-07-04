@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
   <link href="test.css" rel="stylesheet" type="text/css">
 
-  <!-- ADDED STYLESHEET AND CODE -->
+  <!-- ADDED: CSS STYLESHEET AND CODE -->
   <script src="test.js"></script>
   <script src="modal.js"></script>
   <link href="test.css" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
         <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
         <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
-        <!-- ADD NEW LINKS BELOW HERE -->
+        <!-- ADDED CODE: NEW LINKS TO LESSONS -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
         <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
@@ -113,7 +113,6 @@
           <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
           <div class="collapsible-body">
             <ul>
-              <!-- NOT HERE, LEAVE THIS AS IT IS, IT BREAKS ARDUINO CODE OTHERWISE -->
               <li id="menu_example_1"><a href="#!">Blink</a></li>
               <li id="menu_example_2"><a href="#!">Serial print</a></li>
               <li id="menu_example_3"><a href="#!">Serial repeat game</a></li>
@@ -177,7 +176,7 @@
             </div>
           </div>
         </div>
-        <!-- Blockly Panel (panel rechts) -->
+        <!-- Blockly Panel (The panel on the right) -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
             <div id="content_blocks" class="content z-depth-1"></div>
@@ -187,7 +186,7 @@
       <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
           
-          <!-- ADDS TEXT BOARD-->
+          <!-- ADDED CODE: ADDS INSTRUCTIONS BOARD-->
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
@@ -196,7 +195,7 @@
 
             <div class="collapsible-body">
 
-            <div id="step1" style="display:block">
+              <div id="step1" style="display:block">
                 <b>Lesson 3: Pressing the button</b><br>
                 In the previous lesson you learned to turn the led OFF when you press the button. <br>
                 In our whack a mole game we have 5 LEDS. <br><br>
@@ -210,41 +209,39 @@
                 <i>Go to the next step.</i><br>
                 (1/4)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step2" style="display:none"> 
-              <b>Question</b><br>
-              What would happen if you would only change the number of the LED?
-              <details>
-                <summary><i>For a hint, click here!</i></summary>
-                <p>The LEDs are connected to the wrong buttons and the wrong LED will turn of when you push a button</p>
-              </details><br>
+              <div id="step2" style="display:none"> 
+                <b>Question</b><br>
+                What would happen if you would only change the number of the LED?
+                <details>
+                  <summary><i>For a hint, click here!</i></summary>
+                  <p>The LEDs are connected to the wrong buttons and the wrong LED will turn of when you push a button</p>
+                </details><br>
                 <i>Go to the next step.</i><br>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/4)
                 <button id="next" onclick="changeStep(2, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step3" style="display:none">
-              <b>Step 2</b><br>
-              We need to make sure all the LEDS and BUTTONS are connected in pairs. But no need to make the whole code again! <br><br>
-              You can copy the code of one pair and adjust it to a new pair.<br>
-              Try to select the code that you want to copy and copy it by pressing ctrl + c simultaneously then paste it
-              by pressing ctrl + v <br><br>
-              Do this for all the button LED pairs. <br><br>
-              <i>Go to the next step to finish this lesson!</i><br>
-              <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
-              (3/4)
-              <button id="next" onclick="changeStep(3, 'next')">next</button>
-            </div>
+              <div id="step3" style="display:none">
+                <b>Step 2</b><br>
+                We need to make sure all the LEDS and BUTTONS are connected in pairs. But no need to make the whole code again! <br><br>
+                You can copy the code of one pair and adjust it to a new pair.<br>
+                Try to select the code that you want to copy and copy it by pressing ctrl + c simultaneously then paste it
+                by pressing ctrl + v <br><br>
+                Do this for all the button LED pairs. <br><br>
+                <i>Go to the next step to finish this lesson!</i><br>
+                <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
+                (3/4)
+                <button id="next" onclick="changeStep(3, 'next')">next</button>
+              </div>
 
 
-            <div id="step4" style="display:none">
-              <br>
-                <img src="img\run.png" alt="button to run your code"><br>
+              <div id="step4" style="display:none">
+                <br><img src="img\run.png" alt="button to run your code"><br>
                 You can now test your code in Arduino. Upload it like you learned in the first lesson!<br><br>
                 <i>If you're all done, you can check the answer using the left button and move on to lesson 4 by pressing the right button:</i><br>
-
                 <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
                 <div id="modalAnswer" class="modal">
                   <div class="modal-content">
@@ -254,7 +251,6 @@
                     <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson3.xml'), closeModal('modalAnswer')">Show me the answer</button>
                   </div>
                 </div>
-
                 <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br><br>
                 <div id="secModal" class="modal">
                   <div class="modal-content">
@@ -271,14 +267,15 @@
                     <button onclick="togglepopup()">I'm all done!</button>
                   </div>
                 </div>
-
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/4)
               </div>
-            
+              
+            </div>
+
+            <!-- Script with code that changes between divs containing the instructions -->
             <script>
-            
-            function changeStep(curStep, direction) {
+              function changeStep(curStep, direction) {
                 var nextpart = "step"+(curStep+1);
                 var prevpart = "step"+(curStep-1);
                 if (direction == "prev") {
@@ -289,10 +286,10 @@
                   document.getElementById(nextpart).style.display = "block";
                 }
               }
-
             </script>
+
           </li>
-          <!-- END OF ADDED CODE-->
+          <!-- END OF ADDED INSTRUCTINOS BOARD-->
 
           <li>
             <div class="collapsible-header active">
@@ -444,6 +441,7 @@
   <script src="ardublocklyserver_ajax.js"></script>
   <script src="ardublockly_lang.js"></script>
   <script src="ardublockly_design.js"></script>
+  <!-- ADDED CODE: DIFFERENT TOOLBOX BASED ON CURRENT LESSON -->
   <script src="../blockly/Toolboxes/Lesson 3.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>

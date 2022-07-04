@@ -1,48 +1,48 @@
 /* Pop up */
 .popup .overlay {
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:100vw;
-    height:100vh;
-    background:rgba(0,0,0,0,7);
-    z-index:998;
-    display:none;
-  }
-  .popup .content {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate( -50%, -50%) scale(0);
-    background:#fff;
-    width:500px;
-    height: 400px;
-    z-index:998;
-    text-align:center;
-    padding:20px;
-    box-sizing:border-box;
-  }
-  .popup .close-btn {
-    position:absolute;
-    top: 20px;
-    right: 20px;
-    background:#222;
-    width:30px;
-    height: 30px;
-    font-size: 25px;
-    line-height: 30px;
-    text-align:center;
-    border-radius: 50%;
-  }
-  .popup.active .overlay {
-    display: block;
-  }
-  .popup.active .content {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0,7);
+  z-index:998;
+  display:none;
+}
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate( -50%, -50%) scale(0);
+  background:#fff;
+  width:500px;
+  height: 400px;
+  z-index:998;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+}
+.popup .close-btn {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  background:#222;
+  width:30px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align:center;
+  border-radius: 50%;
+}
+.popup.active .overlay {
+  display: block;
+}
+.popup.active .content {
   transition: all 500ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
-  }
+}
 
-  /* The Modal (background) */
+/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -74,7 +74,6 @@
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: #000;

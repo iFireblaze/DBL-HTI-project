@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="prettify/arduino.css">
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
 
-  <!-- ADDED STYLESHEET AND CODE -->
+  <!-- ADDED: CSS STYLESHEET AND CODE -->
   <script src="test.js"></script>
   <script src="modal.js"></script>
   <link href="test.css" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
         <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
         <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
-        <!-- ADD NEW LINKS BELOW HERE -->
+        <!-- ADDED CODE: NEW LINKS TO LESSONS -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
         <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
@@ -113,7 +113,6 @@
           <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
           <div class="collapsible-body">
             <ul>
-              <!-- NOT HERE, LEAVE THIS AS IT IS, IT BREAKS ARDUINO CODE OTHERWISE -->
               <li id="menu_example_1"><a href="#!">Blink</a></li>
               <li id="menu_example_2"><a href="#!">Serial print</a></li>
               <li id="menu_example_3"><a href="#!">Serial repeat game</a></li>
@@ -177,7 +176,7 @@
             </div>
           </div>
         </div>
-        <!-- Blockly Panel -->
+        <!-- Blockly Panel (The panel on the right) -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
             <div id="content_blocks" class="content z-depth-1"></div>
@@ -186,6 +185,8 @@
       </div>
       <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
+
+          <!-- ADDED CODE: ADDS INSTRUCTIONS BOARD-->
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
@@ -194,41 +195,36 @@
 
             <div class="collapsible-body">
             
-            <div id="step1" style="display:block">
+              <div id="step1" style="display:block">
                 <b>Loops with limits</b><br>
                 In this lesson we will look at a new type of loop function which stops after a certain time instead of looping forever.<br><br>
                 The block reads:<br>
                 <img src="img\block-repeat-times.png" alt="repeat times" width="200"><br><br>
-
                 In the blank, you can put a certain number or a <i>variable</i>. <br>A variable is something with a name like 'x' which has a value that you can <b>change</b> like 'x=2'.
                 <br>You can set the value of a variable with the block:<br>
                 <img src="img\block-set-to.png" alt="set to" width="200"><br><br>
                 <i>Continue to the next step.</i><br>
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step2" style="display:none">
+              <div id="step2" style="display:none">
                 <b>With these new blocks, try to make this:</b><br>
                 <i>When the program runs, it turns a LED ON for 1 second and then OFF for 1 second. It repeats this 'x' times, where 'x' equals 5.</i><br><br>
                 Don't be afraid to play around with the numbers: <br>change how long the light is on or how often it repeats!<br><br>
-
-                    <i>Go to the next step, or check the example</i><br>
-
-                  <button id="myBtn" onclick="openModal('answerModal1')">Show the answer</button><br><br>
-
-              <div id="answerModal1" class="modal">
-                <div class="modal-content">
-                  <span class="close" onclick="closeModal('answerModal1')">&times;</span>
-                  <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
-                  <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
-                  <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson6.1.xml'), closeModal('answerModal1')">Show me the answer</button>
+                <i>Go to the next step, or check the example</i><br>
+                <button id="myBtn" onclick="openModal('answerModal1')">Show the answer</button><br><br>
+                <div id="answerModal1" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('answerModal1')">&times;</span>
+                    <p>Are you sure you are ready to check the answers? If you're stuck then check out the hints first.</p>
+                    <p>Otherwise: Click the button to load in the answer (make sure to save your own answer first if you haven't yet!)</p>
+                    <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson6.1.xml'), closeModal('answerModal1')">Show me the answer</button>
+                  </div>
                 </div>
-              </div>
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/4)
                 <button id="next" onclick="changeStep(2, 'next')">next</button>
               </div>
-
 
               <div id="step3" style="display:none">
                 <b>For this exercise we need 2 more new blocks:</b><br>
@@ -251,7 +247,6 @@
                 The <i>repeat [...] times</i> loop will be used to measure the time. The program will check every <b>50 microseconds</b> whether the button is pressed or not.<br><br>
                 The loop will end when the time (the amount of 'loops' multiplied by 50 microseconds) is over, or when it notices the button is pressed.<br><br>
                 When the loop ends one way or another, the LED will turn off for 3 seconds and everything starts again.<br><br>
-
                 <i>If you're all done, you can check the answer using the left button and move on to lesson 7 by pressing the right button:</i><br>
                 <button id="myBtn" onclick="openModal('answerModal2')">Show the answer</button>
                 <div id="answerModal2" class="modal">
@@ -262,7 +257,6 @@
                     <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson6.xml'), closeModal('modalAnswer2')">Show me the answer</button>
                   </div>
                 </div>
-
                 <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br><br>
                 <div id="secModal" class="modal">
                   <div class="modal-content">
@@ -279,30 +273,29 @@
                     <button onclick="togglepopup()">I'm all done!</button>
                   </div>
                 </div>
-
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/4)
               </div>
-
-            <script>
-
-            function changeStep(curStep, direction) {
-              var nextpart = "step"+(curStep+1);
-              var prevpart = "step"+(curStep-1);
-              if (direction == "prev") {
-                document.getElementById("step"+curStep).style.display = "none";
-                document.getElementById(prevpart).style.display = "block";
-              } else if (direction == "next") {
-                document.getElementById("step"+curStep).style.display = "none";
-                document.getElementById(nextpart).style.display = "block";
-              }
-            }
-
-            </script>
+              
             </div>
-          </li>
 
-          <!-- EINDE VAN TOEGEVOEGDE CODE -->
+            <!-- Script with code that changes between divs containing the instructions -->
+            <script>
+              function changeStep(curStep, direction) {
+                var nextpart = "step"+(curStep+1);
+                var prevpart = "step"+(curStep-1);
+                if (direction == "prev") {
+                  document.getElementById("step"+curStep).style.display = "none";
+                  document.getElementById(prevpart).style.display = "block";
+                } else if (direction == "next") {
+                  document.getElementById("step"+curStep).style.display = "none";
+                  document.getElementById(nextpart).style.display = "block";
+                }
+              }
+            </script>
+
+          </li>
+          <!-- END OF ADDED INSTRUCTINOS BOARD-->
 
           <li>
             <div class="collapsible-header active">
@@ -454,6 +447,7 @@
   <script src="ardublocklyserver_ajax.js"></script>
   <script src="ardublockly_lang.js"></script>
   <script src="ardublockly_design.js"></script>
+    <!-- ADDED CODE: DIFFERENT TOOLBOX BASED ON CURRENT LESSON -->
   <script src="../blockly/Toolboxes/ardublockly_toolbox_6.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>

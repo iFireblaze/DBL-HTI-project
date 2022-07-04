@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
   <link href="test.css" rel="stylesheet" type="text/css">
 
-  <!-- ADDED STYLESHEET AND CODE -->
+  <!-- ADDED: CSS STYLESHEET AND CODE -->
   <script src="test.js"></script>
   <script src="modal.js"></script>
   <link href="test.css" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
         <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
         <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
-        <!-- ADD NEW LINKS BELOW HERE -->
+        <!-- ADDED CODE: NEW LINKS TO LESSONS -->
         <li id="index"><a href="index.html" target="_blank">index</a></li>
         <li id="intro"><a href="wamintro.html" target="_blank">Introduction</a></li>
         <li id="lesson1"><a href="wam1.html" target="_blank">Lesson 1</a></li>
@@ -113,7 +113,6 @@
           <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
           <div class="collapsible-body">
             <ul>
-              <!-- NOT HERE, LEAVE THIS AS IT IS, IT BREAKS ARDUINO CODE OTHERWISE -->
               <li id="menu_example_1"><a href="#!">Blink</a></li>
               <li id="menu_example_2"><a href="#!">Serial print</a></li>
               <li id="menu_example_3"><a href="#!">Serial repeat game</a></li>
@@ -177,7 +176,7 @@
             </div>
           </div>
         </div>
-        <!-- Blockly Panel (panel rechts) -->
+        <!-- Blockly Panel (The panel on the right) -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
             <div id="content_blocks" class="content z-depth-1"></div>
@@ -187,7 +186,7 @@
       <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
           
-          <!-- ADDS TEXT BOARD-->
+          <!-- ADDED CODE: ADDS INSTRUCTIONS BOARD-->
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
@@ -196,7 +195,7 @@
 
             <div class="collapsible-body">
 
-            <div id="step1" style="display:block">
+              <div id="step1" style="display:block">
                 <b>Start of the project: Turning on an LED</b><br>
                 Now it's time to code something.<br>
                 We'll start off small by turning on one of the LED's (lights).<br><br>
@@ -206,10 +205,10 @@
                 <img src="img\block-loop1.png" alt="Block arduino loop" width="200"><br><br>
                 (1/6)
                 <button id="next" onclick="changeStep(1, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step2" style="display:none"> 
-              <b>Step 1</b><br>
+              <div id="step2" style="display:none"> 
+                <b>Step 1</b><br>
                 Drag the "Arduino run first, arduino loop forever" block to the working space. You can find this block under the category 'Functions'. <br><br>
                 Now you will need to "click" another block in the block to turn an LED light on. This is done with the "Power LED .. to ..." block. <br>
                 This block enables to turn on or off an LED on the Arduino.<br>
@@ -219,22 +218,22 @@
                 <button id="prev" onclick="changeStep(2, 'prev')">previous</button>
                 (2/6)
                 <button id="next" onclick="changeStep(2, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step3" style="display:none">
-              <b>Step 2</b>
-              Drag the "Power LED .. to .." block to the white canvas in the middle, and try to click it in the "Arduino run first, Arduino loop forever" block.<br>
-              This Block has two input places (openings), put the block in the "run first" input place.<br>
-              Change the 0 in the block to a 1. In this way you select LED 1. Keep the second part of the block on ON (this means the LED must turn on).<br>
-              <img src="img\lesson1-block.png" alt="How to change LED" width="200"><br>
-              That's it! Now all that's left is to put that code on the Arduino and let it perform the action.<br><br>
-              <i>Go to the next step to finish this lesson!</i><br>
-              <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
-              (3/6)
-              <button id="next" onclick="changeStep(3, 'next')">next</button>
-            </div>
+              <div id="step3" style="display:none">
+                <b>Step 2</b>
+                Drag the "Power LED .. to .." block to the white canvas in the middle, and try to click it in the "Arduino run first, Arduino loop forever" block.<br>
+                This Block has two input places (openings), put the block in the "run first" input place.<br>
+                Change the 0 in the block to a 1. In this way you select LED 1. Keep the second part of the block on ON (this means the LED must turn on).<br>
+                <img src="img\lesson1-block.png" alt="How to change LED" width="200"><br>
+                That's it! Now all that's left is to put that code on the Arduino and let it perform the action.<br><br>
+                <i>Go to the next step to finish this lesson!</i><br>
+                <button id="prev" onclick="changeStep(3, 'prev')">previous</button>
+                (3/6)
+                <button id="next" onclick="changeStep(3, 'next')">next</button>
+              </div>
 
-            <div id="step4" style="display:none">
+              <div id="step4" style="display:none">
                 <b>Upload code to the Arduino</b><br>
                 Finally, we get to put your code on the Arduino!<br>
                 This consists of two steps, first you verify your code. This is to check whether it works.
@@ -246,9 +245,9 @@
                 <button id="prev" onclick="changeStep(4, 'prev')">previous</button>
                 (4/6)
                 <button id="next" onclick="changeStep(4, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step5" style="display:none">
+              <div id="step5" style="display:none">
                 Now to upload the code to the Arduino. First connect the Arduino by simply plugging it in the USB port.<br>                
                 Now simply press the play button.<br>
                 <img src="img\run.png" alt="button to run your code"><br>
@@ -259,21 +258,18 @@
                 <button id="prev" onclick="changeStep(5, 'prev')">previous</button>
                 (5/6)
                 <button id="next" onclick="changeStep(5, 'next')">next</button>
-            </div>
+              </div>
 
-            <div id="step6" style="display:none">
-              <b>Extra excercise</b><br>
+              <div id="step6" style="display:none">
+                <b>Extra excercise</b><br>
                 You were able to turn on the first LED, can you also turn on the other lights? <br><br>
                 If you think you did it, try it out by uploading the code to the Arduino. <br><br> 
-                
                 Secondly, is it possible to turn on more lights at once? Try figuring it out and use the hint if you need it.<br><br>
                 <details>
                   <summary>For a hint, click here!:</summary>
                   <p>Maybe if you give it multiple commands to do at once when it first runs? Maybe it's possible to click more blocks under the "Power LED .. to .." block.</p>
                 </details><br>
-                
                 <i>If you're all done, you can check the answer using the left button and move on to lesson 2 by pressing the right button:</i><br>
-                
                 <button id="myBtn" onclick="openModal('modalAnswer')">Show the answer</button>
                 <div id="modalAnswer" class="modal">
                   <div class="modal-content">
@@ -283,7 +279,6 @@
                     <button onclick="Ardublockly.loadServerXmlFile('../examples/lesson1.xml'), closeModal('modalAnswer')">Show me the answer</button>
                   </div>
                 </div>
-
                 <button id="myBtn" onclick="openModal('secModal')">Go to the next lesson</button><br><br>
                 <div id="secModal" class="modal">
                   <div class="modal-content">
@@ -300,14 +295,15 @@
                     <button onclick="togglepopup()">I'm all done!</button>
                   </div>
                 </div>
-
                 <button id="prev" onclick="changeStep(6, 'prev')">previous</button>
                 (6/6)
+              </div>
+
             </div>
             
+            <!-- Script with code that changes between divs containing the instructions -->
             <script>
-            
-            function changeStep(curStep, direction) {
+              function changeStep(curStep, direction) {
                 var nextpart = "step"+(curStep+1);
                 var prevpart = "step"+(curStep-1);
                 if (direction == "prev") {
@@ -318,12 +314,10 @@
                   document.getElementById(nextpart).style.display = "block";
                 }
               }
-
             </script>
 
-            </div>
           </li>
-          <!-- END OF ADDED CODE-->
+          <!-- END OF ADDED INSTRUCTINOS BOARD-->
 
           <li>
             <div class="collapsible-header active">
@@ -475,6 +469,7 @@
   <script src="ardublocklyserver_ajax.js"></script>
   <script src="ardublockly_lang.js"></script>
   <script src="ardublockly_design.js"></script>
+  <!-- ADDED CODE: DIFFERENT TOOLBOX BASED ON CURRENT LESSON -->
   <script src="../blockly/Toolboxes/ardublockly_toolbox_1.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>

@@ -1,9 +1,24 @@
 # Ardublockly-based learning tool for kids with ADHD aged 12-14: added content
-This program is built upon the basis of Ardublockly with added features to aid the specified group of users:
+This program is built upon the basis of Ardublockly with added UI and Interaction Techniques to aid the specified group of users
+in creating the game whack-a-mole using an arduino.
+The added UI and Interaction techniques are:
 - Positive feedback
 - Short visual-based instructions
 - Forms of help, such as hints and examples
-- Easy to navigate instructions to motivate them to set their own pace.
+- Easy to navigate instructions to motivate them to set their own pace (and also the ability to save and load already present in Ardublockly)
+- New blocks that are simplified to make instructions and programming easier
+- A specific selection of blocks for each lesson in order to make programming less confusing
+
+Features added to the basis of Ardublockly:
+- An extra collapsable board above the Arduino code board, that holds the text, images, button, etc. of the lesson
+- The buttons and code to navigate between pieces of instructions on this board
+- The ability to open up a modal to display content above current page. Stops access to the content below it. Is used to ask for confirmation before continuing
+- The ability to load a specific XML file by pressing a button (skips having to navigate to the file on your computer)
+- A pop-up that shows up with an animation to give some positive feedback
+- Hint buttons that can be clicked to show/hide the hint
+- New Blocks that have simplify programming
+- A seperate toolbox for each lesson that narrows down the amount of usable blocks to what is needed for that lesson
+- (For the first lesson) An interactive demo of the game that the student is about to create
 
 # Ardublockly
 Ardublockly is a visual programming editor for Arduino. It is based on Google's [Blockly][1], which has been forked to generate [Arduino][15] code.

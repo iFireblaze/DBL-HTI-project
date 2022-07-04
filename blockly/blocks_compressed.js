@@ -214,7 +214,7 @@ return Blockly.Types[a]}};
 Blockly.Blocks.turn_led_on={
   init:function(){this.setHelpUrl("http://arduino.cc/en/Reference/DigitalWrite");
   this.setColour(230);
-  this.appendValueInput("STATE").appendField("Power LED").appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.digitalPins),"LED").appendField(Blockly.Msg.ARD_WRITE_TO).setCheck(Blockly.Types.BOOLEAN.checkList);
+  this.appendValueInput("STATE").appendField("Power LED").appendField(new Blockly.FieldDropdown([['Led 2','2'],['Led 3','3'],['Led 4','4'],['Led 5','5'],['Led 6','6'],['Led 7','7'],['Led 8','8']]),"LED").appendField(Blockly.Msg.ARD_WRITE_TO).setCheck(Blockly.Types.BOOLEAN.checkList);
   this.setInputsInline(!1);this.setPreviousStatement(!0,null);this.setNextStatement(!0,null);
   this.setTooltip(Blockly.Msg.ARD_DIGITALWRITE_TIP)},
   updateFields:function(){Blockly.Arduino.Boards.refreshBlockFieldDropdown(this,"LED","digitalLED")}};
@@ -304,8 +304,8 @@ Blockly.Blocks.math_random_int={init:function(){this.jsonInit({message0:Blockly.
 Blockly.Blocks.logic_compare={init:function(){
   var a=this.RTL?[["=","EQ"],["\u2260","NEQ"],[">","LT"],["\u2265","LTE"],["<","GT"],["\u2264","GTE"]]:[["=","EQ"],["\u2260","NEQ"],["<","LT"],["\u2264","LTE"],[">","GT"],["\u2265","GTE"]];this.setHelpUrl(Blockly.Msg.LOGIC_COMPARE_HELPURL);
   this.setColour('#ff4d4d');this.setOutput(!0,Blockly.Types.BOOLEAN.output);this.appendValueInput("A");this.appendValueInput("B").appendField(new Blockly.FieldDropdown(a),"OP");this.setInputsInline(!0);var b=
-this;this.setTooltip(function(){var a=b.getFieldValue("OP");return{EQ:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ,NEQ:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ,LT:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT,LTE:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE,GT:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT,GTE:Blockly.Msg.LOGIC_COMPARE_TOOLTIPGTE}[a]});this.prevBlocks=[null,null]},onchange:function(a){var b=this.getInputTargetBlock("A"),c=this.getInputTargetBlock("B");if(b&&c&&!b.outputConnection.checkType(c.outputConnection)){Blockly.Events.setGroup(a.group);
-for(a=0;a<this.prevBlocks.length;a++){var d=this.prevBlocks[a];if(d===b||d===c)d.unplug(),d.bumpNeighbours()}Blockly.Events.setGroup(!1)}this.prevBlocks[0]=b;this.prevBlocks[1]=c},getBlockType:function(){return Blockly.Types.BOOLEAN}};
+this;this.setTooltip(function(){var a=b.getFieldValue("OP");return{EQ:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ,NEQ:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ,LT:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT,LTE:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE,GT:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT,GTE:Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE}[a]});this.prevBlocks_=[null,null]},onchange:function(a){var b=this.getInputTargetBlock("A"),c=this.getInputTargetBlock("B");if(b&&c&&!b.outputConnection.checkType_(c.outputConnection)){Blockly.Events.setGroup(a.group);
+for(a=0;a<this.prevBlocks_.length;a++){var d=this.prevBlocks_[a];if(d===b||d===c)d.unplug(),d.bumpNeighbours_()}Blockly.Events.setGroup(!1)}this.prevBlocks_[0]=b;this.prevBlocks_[1]=c},getBlockType:function(){return Blockly.Types.BOOLEAN}};
 
 
 

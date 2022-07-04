@@ -2,7 +2,7 @@
   <block type="arduino_functions" id="7+a(h-#GnbSpQ=4!U`RN" x="288" y="147">
     <statement name="LOOP_FUNC">
       <block type="turn_led_on" id="6[/TKOL%TJbl!LWYr;(K">
-        <field name="LED">1</field>
+        <field name="LED">2</field>
         <value name="STATE">
           <block type="ON_OFF" id="ox{K3Da;%_~V%Lh4E.,}">
             <field name="STATE">HIGH</field>

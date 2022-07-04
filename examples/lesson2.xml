@@ -10,7 +10,7 @@
         </value>
         <statement name="DO0">
           <block type="turn_led_on" id="NBmK33!4[0XeDdkQm5f+">
-            <field name="LED">1</field>
+            <field name="LED">2</field>
             <value name="STATE">
               <block type="ON_OFF" id="WsC}2tY(1_n*1iu/T/pf">
                 <field name="STATE">LOW</field>
@@ -20,7 +20,7 @@
         </statement>
         <statement name="ELSE">
           <block type="turn_led_on" id="N+mqmu3.}zP4nE9jdfIL">
-            <field name="LED">1</field>
+            <field name="LED">2</field>
             <value name="STATE">
               <block type="ON_OFF" id="_)EXd5Py:SA2jHaA6ZUT">
                 <field name="STATE">HIGH</field>

@@ -2,7 +2,7 @@
   <block type="arduino_functions" id="%,NJ(56`!(Rk@)a7(E}y" x="200" y="136">
     <statement name="SETUP_FUNC">
       <block type="variables_set" id="yD:XQ(y.dL{:8^`R~q{.">
-        <field name="VAR">x</field>
+        <field name="VAR">loop</field>
         <value name="VALUE">
           <block type="math_number" id="#7Vr_^j;.N,+=cb,~*42">
             <field name="NUM">5</field>
@@ -14,12 +14,12 @@
       <block type="controls_repeat_ext" id="%%Ba9mP{gw3u;p=srTRa">
         <value name="TIMES">
           <block type="variables_get" id="UB}5MLGTnSSNJ^D^n%*4">
-            <field name="VAR">x</field>
+            <field name="VAR">loop</field>
           </block>
         </value>
         <statement name="DO">
           <block type="turn_led_on" id="2bbVczD.bW`PH8T[B*jX">
-            <field name="LED">1</field>
+            <field name="LED">2</field>
             <value name="STATE">
               <block type="ON_OFF" id="l6Z|,,Bc?[P`-:|{6VgY">
                 <field name="STATE">HIGH</field>
@@ -34,7 +34,7 @@
                 </value>
                 <next>
                   <block type="turn_led_on" id="9ux_J*pxWvV^g~r^~eEc">
-                    <field name="LED">1</field>
+                    <field name="LED">2</field>
                     <value name="STATE">
                       <block type="ON_OFF" id="d|]WR^UB*Sax,cIzCv8!">
                         <field name="STATE">LOW</field>

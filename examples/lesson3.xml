@@ -10,7 +10,7 @@
         </value>
         <statement name="DO0">
           <block type="turn_led_on" id="xGg@|EB(F+3G4+MD:Q/H">
-            <field name="LED">1</field>
+            <field name="LED">2</field>
             <value name="STATE">
               <block type="ON_OFF" id="j}V:ofpfJ^8_(A8ai|_Z">
                 <field name="STATE">LOW</field>
@@ -20,7 +20,7 @@
         </statement>
         <statement name="ELSE">
           <block type="turn_led_on" id="qG8Gi@MBF|Ok`ag|2wk#">
-            <field name="LED">1</field>
+            <field name="LED">2</field>
             <value name="STATE">
               <block type="ON_OFF" id="#RKzH2J[r=(ZtkN38BG@">
                 <field name="STATE">HIGH</field>
@@ -38,7 +38,7 @@
             </value>
             <statement name="DO0">
               <block type="turn_led_on" id="oxl]Vhsw?HF(=Qw6F)Z2">
-                <field name="LED">2</field>
+                <field name="LED">3</field>
                 <value name="STATE">
                   <block type="ON_OFF" id="cjh@bB`Qf)G()*{)I,j6">
                     <field name="STATE">LOW</field>
@@ -48,7 +48,7 @@
             </statement>
             <statement name="ELSE">
               <block type="turn_led_on" id="lkPEW7gU{AaOwyA@7Arn">
-                <field name="LED">2</field>
+                <field name="LED">3</field>
                 <value name="STATE">
                   <block type="ON_OFF" id="uOXE|WF;ddN)]qE%pUbU">
                     <field name="STATE">HIGH</field>
@@ -66,7 +66,7 @@
                 </value>
                 <statement name="DO0">
                   <block type="turn_led_on" id="urVF{Gg[J4!CJdk3q,^0">
-                    <field name="LED">3</field>
+                    <field name="LED">4</field>
                     <value name="STATE">
                       <block type="ON_OFF" id="L`9[XYklrv#+He%]+0@c">
                         <field name="STATE">LOW</field>
@@ -76,7 +76,7 @@
                 </statement>
                 <statement name="ELSE">
                   <block type="turn_led_on" id="]:E!gCHfUFz1S[d++3x/">
-                    <field name="LED">3</field>
+                    <field name="LED">4</field>
                     <value name="STATE">
                       <block type="ON_OFF" id="MM#wV43wTAW;8k4{{Sk:">
                         <field name="STATE">HIGH</field>
@@ -94,7 +94,7 @@
                     </value>
                     <statement name="DO0">
                       <block type="turn_led_on" id="z_9{9b3;gtIH;yQ~Sr3n">
-                        <field name="LED">4</field>
+                        <field name="LED">5</field>
                         <value name="STATE">
                           <block type="ON_OFF" id="2AD-h^SfEP~]ETk.~1Xl">
                             <field name="STATE">LOW</field>
@@ -104,7 +104,7 @@
                     </statement>
                     <statement name="ELSE">
                       <block type="turn_led_on" id="WS!v/fP;sZO)weF~FN41">
-                        <field name="LED">4</field>
+                        <field name="LED">5</field>
                         <value name="STATE">
                           <block type="ON_OFF" id="X_:{TS)Kw;-kI~o/^q-d">
                             <field name="STATE">HIGH</field>
@@ -122,7 +122,7 @@
                         </value>
                         <statement name="DO0">
                           <block type="turn_led_on" id="O;LcVA6@-|`#mwMaNH[-">
-                            <field name="LED">5</field>
+                            <field name="LED">6</field>
                             <value name="STATE">
                               <block type="ON_OFF" id="#loOTh@_sU[n|F/O_sHx">
                                 <field name="STATE">LOW</field>
@@ -132,7 +132,7 @@
                         </statement>
                         <statement name="ELSE">
                           <block type="turn_led_on" id="5W?K3}6bJiA*a0H:@Fei">
-                            <field name="LED">5</field>
+                            <field name="LED">6</field>
                             <value name="STATE">
                               <block type="ON_OFF" id="M5bg_b)_W%KlqgWW5hH}">
                                 <field name="STATE">HIGH</field>

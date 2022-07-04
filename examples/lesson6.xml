@@ -18,10 +18,10 @@
           </block>
         </value>
         <next>
-          <block type="io_digitalwrite" id="Vu!PWUB(mY/4r/`n_.|s">
-            <field name="PIN">2</field>
+          <block type="turn_led_on" id="FMzTqG]Llbznl,[~r]Bi">
+            <field name="LED">2</field>
             <value name="STATE">
-              <block type="io_highlow" id="vt)MWp:cE6xAvgoq#B.F">
+              <block type="ON_OFF" id="oKu,pCooOCfLRk^aBt0H">
                 <field name="STATE">HIGH</field>
               </block>
             </value>
@@ -35,15 +35,15 @@
                 <statement name="DO">
                   <block type="controls_if" id="=(ZyR~20#i~e^PG,]8+b">
                     <value name="IF0">
-                      <block type="io_digitalread" id="|f7wbGGew9~z;P{%KVqt">
+                      <block type="Read_Button" id="~NyC+UsZ,A?jC#:-{6vT">
                         <field name="PIN">9</field>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="io_digitalwrite" id="XHXjix2SZc3~,s?hfy[I">
-                        <field name="PIN">2</field>
+                      <block type="turn_led_on" id="UZ-1kp[`8g]]0dbn=r5t">
+                        <field name="LED">2</field>
                         <value name="STATE">
-                          <block type="io_highlow" id=")T21R84J7l~9hAP(0Y#4">
+                          <block type="ON_OFF" id="4(KqyM91EF/zMI7G7!]`">
                             <field name="STATE">LOW</field>
                           </block>
                         </value>
@@ -66,10 +66,10 @@
                   </block>
                 </statement>
                 <next>
-                  <block type="io_digitalwrite" id="Y#Ss8m~^,`NSSWyxh8w-">
-                    <field name="PIN">2</field>
+                  <block type="turn_led_on" id="xN!,sPYN=WgnA/w]e!(0">
+                    <field name="LED">2</field>
                     <value name="STATE">
-                      <block type="io_highlow" id="K]HosW/c6[3GUzHju1!7">
+                      <block type="ON_OFF" id="#}gFisCkRnM-elUg9++f">
                         <field name="STATE">LOW</field>
                       </block>
                     </value>

@@ -1,6 +1,7 @@
 # Ardublockly-based learning tool for kids with ADHD aged 12-14: added content
 This program is built upon the basis of Ardublockly with added UI and Interaction Techniques to aid the specified group of users
 in creating the game whack-a-mole using an arduino.
+
 The added UI and Interaction techniques are:
 - Positive feedback
 - Short visual-based instructions
@@ -19,6 +20,16 @@ Features added to the basis of Ardublockly:
 - New Blocks that have simplify programming
 - A seperate toolbox for each lesson that narrows down the amount of usable blocks to what is needed for that lesson
 - (For the first lesson) An interactive demo of the game that the student is about to create
+
+Short instruction for how to set up:
+- Launch ardublockly locally using localhost by opening start.py in the DBL-HTI-project folder
+- Click the three horizontal lines in the top-left
+- Click on the Settings option
+- Fill in the location of the arduino IDE (this is arduino.exe). This can be found easy by searching for the arduino and copying its path
+- Enter the desired sketch folder
+- Select the type of Arduino board that you are using
+- Make sure that the arduino is connected using USB to select the COM port (if needed, often the automatic setting is correct)
+- Change the other two settings to your preference if needed
 
 # Ardublockly
 Ardublockly is a visual programming editor for Arduino. It is based on Google's [Blockly][1], which has been forked to generate [Arduino][15] code.

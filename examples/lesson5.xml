@@ -20,13 +20,13 @@
                 <field name="LED">2</field>
                 <value name="STATE">
                   <block type="ON_OFF" id="r8%r?3DC~AFcvfXmiD{f">
-                    <field name="STATE">HIGH</field>
+                    <field name="STATE">LOW</field>
                   </block>
                 </value>
                 <next>
-                  <block type="time_delaymicros" id="i4Jo.Vn:oE.0~Dd@L7=d">
-                    <value name="DELAY_TIME_MICRO">
-                      <block type="math_number" id="}=trmJZZ|]20Sz9hdOuq">
+                  <block type="time_delay" id="/oq,9*SmMTzSA[Qnc!)D">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="v7u|vOC5RwN#F[Zh7b#X">
                         <field name="NUM">2000</field>
                       </block>
                     </value>

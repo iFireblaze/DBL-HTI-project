@@ -209,7 +209,7 @@
 
               <div id="step2" style="display:none">
                 <b>With these new blocks, try to make this:</b><br>
-                <i>When the program runs, it turns a LED ON for 1 second and then OFF for 1 second. It repeats this 'x' times, where 'x' equals 5.</i><br><br>
+                <i>When the program runs, it turns a LED ON for 1 second and then OFF for 1 second. It repeats this 'x' times, where 'x' equals 5. Afterwards it waits for 5 seconds.</i><br><br>
                 Don't be afraid to play around with the numbers: <br>change how long the light is on or how often it repeats!<br><br>
                 <i>Go to the next step, or check the example</i><br>
                 <button id="myBtn" onclick="openModal('answerModal1')">Show the answer</button><br><br>
@@ -243,9 +243,9 @@
               <div id="step4" style="display:none">
                 Now we're gonna work on the next step, where the goal is:<br>
                 <b>Turning on the LED and turning it off for 3 seconds when the button is pressed or when a random timelimit is reached.</b><br><br>
-                Let's start by setting a variable called 'loops' to a random number between 30 000 and 32 000. This number will be the amount of times the loop will be repeated.<br><br>
-                The <i>repeat [...] times</i> loop will be used to measure the time. The program will check every <b>50 microseconds</b> whether the button is pressed or not.<br><br>
-                The loop will end when the time (the amount of 'loops' multiplied by 50 microseconds) is over, or when it notices the button is pressed.<br><br>
+                Let's start by setting a variable called 'loops' to a random number between 2000 and 2200. This number will be the amount of times the loop will be repeated.<br><br>
+                The <i>repeat [...] times</i> loop will be used to measure the time. The program will check every <b>5 milliseconds</b> whether the button is pressed or not.<br><br>
+                The loop will end when the time (the amount of 'loops' multiplied by 5 milliseconds) is over, or when it notices the button is pressed.<br><br>
                 When the loop ends one way or another, the LED will turn off for 3 seconds and everything starts again.<br><br>
                 <i>If you're all done, you can check the answer using the left button and move on to lesson 7 by pressing the right button:</i><br>
                 <button id="myBtn" onclick="openModal('answerModal2')">Show the answer</button>

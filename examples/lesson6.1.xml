@@ -2,7 +2,7 @@
   <block type="arduino_functions" id="%,NJ(56`!(Rk@)a7(E}y" x="200" y="136">
     <statement name="SETUP_FUNC">
       <block type="variables_set" id="yD:XQ(y.dL{:8^`R~q{.">
-        <field name="VAR">loop</field>
+        <field name="VAR">x</field>
         <value name="VALUE">
           <block type="math_number" id="#7Vr_^j;.N,+=cb,~*42">
             <field name="NUM">5</field>
@@ -14,7 +14,7 @@
       <block type="controls_repeat_ext" id="%%Ba9mP{gw3u;p=srTRa">
         <value name="TIMES">
           <block type="variables_get" id="UB}5MLGTnSSNJ^D^n%*4">
-            <field name="VAR">loop</field>
+            <field name="VAR">x</field>
           </block>
         </value>
         <statement name="DO">
@@ -26,9 +26,9 @@
               </block>
             </value>
             <next>
-              <block type="time_delaymicros" id="^}2EqK/h{;G_*0%DZ`ZA">
-                <value name="DELAY_TIME_MICRO">
-                  <block type="math_number" id="U0.qy*uoqC(Ee2{xi[cJ">
+              <block type="time_delay" id="!w)eeNd]^^.u+nhyOWpX">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="sp1(ZFs^1EP}S02p;:?~">
                     <field name="NUM">1000</field>
                   </block>
                 </value>
@@ -41,9 +41,9 @@
                       </block>
                     </value>
                     <next>
-                      <block type="time_delaymicros" id="PT,-N!=SufT:X{C8,Xw7">
-                        <value name="DELAY_TIME_MICRO">
-                          <block type="math_number" id="gly)h}Eb1D4zanI!=J.;">
+                      <block type="time_delay" id="5=~YHI@CjPwZxJIJl;^n">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="jEG9941_kxpca52o~bi3">
                             <field name="NUM">1000</field>
                           </block>
                         </value>
@@ -55,6 +55,15 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="time_delay" id="!8fpri*Bs._,Sj+1,-+H">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="supcRmhWR]=n(uS}|uMU">
+                <field name="NUM">5000</field>
+              </block>
+            </value>
+          </block>
+        </next>
       </block>
     </statement>
   </block>

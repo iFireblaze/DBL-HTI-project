@@ -7,21 +7,21 @@
           <block type="math_random_int" id="KD3`]uH/A3@d8dEw-!:L">
             <value name="FROM">
               <block type="math_number" id="o#c_#i5@n;dRt+u2Q)CD">
-                <field name="NUM">30000</field>
+                <field name="NUM">2000</field>
               </block>
             </value>
             <value name="TO">
               <block type="math_number" id="T_L!LlMfi4o%YBd7wn0Y">
-                <field name="NUM">32000</field>
+                <field name="NUM">2200</field>
               </block>
             </value>
           </block>
         </value>
         <next>
-          <block type="turn_led_on" id="FMzTqG]Llbznl,[~r]Bi">
+          <block type="turn_led_on" id="ol;H}f[4bZrQwfI^O-@1">
             <field name="LED">2</field>
             <value name="STATE">
-              <block type="ON_OFF" id="oKu,pCooOCfLRk^aBt0H">
+              <block type="ON_OFF" id="wx?M@N,o*WteAza-?HX[">
                 <field name="STATE">HIGH</field>
               </block>
             </value>
@@ -35,15 +35,15 @@
                 <statement name="DO">
                   <block type="controls_if" id="=(ZyR~20#i~e^PG,]8+b">
                     <value name="IF0">
-                      <block type="Read_Button" id="~NyC+UsZ,A?jC#:-{6vT">
+                      <block type="Read_Button" id="mV(3OvcHFx5`D8U]{d;c">
                         <field name="PIN">9</field>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="turn_led_on" id="UZ-1kp[`8g]]0dbn=r5t">
+                      <block type="turn_led_on" id="bro,fy3E(]=bR!7BjfK@">
                         <field name="LED">2</field>
                         <value name="STATE">
-                          <block type="ON_OFF" id="4(KqyM91EF/zMI7G7!]`">
+                          <block type="ON_OFF" id="Jx.O8X(l,zp{OZ|W[~-~">
                             <field name="STATE">LOW</field>
                           </block>
                         </value>
@@ -55,10 +55,10 @@
                       </block>
                     </statement>
                     <next>
-                      <block type="time_delaymicros" id="i4Jo.Vn:oE.0~Dd@L7=d">
-                        <value name="DELAY_TIME_MICRO">
-                          <block type="math_number" id="}=trmJZZ|]20Sz9hdOuq">
-                            <field name="NUM">50</field>
+                      <block type="time_delay" id="J:%Hg(iV2kaT5w*BqYN@">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="3U{2f0}cG]*/[l3K|G^B">
+                            <field name="NUM">5</field>
                           </block>
                         </value>
                       </block>
@@ -66,17 +66,17 @@
                   </block>
                 </statement>
                 <next>
-                  <block type="turn_led_on" id="xN!,sPYN=WgnA/w]e!(0">
+                  <block type="turn_led_on" id="kMS[m@4h6vMvu6qtiUg?">
                     <field name="LED">2</field>
                     <value name="STATE">
-                      <block type="ON_OFF" id="#}gFisCkRnM-elUg9++f">
+                      <block type="ON_OFF" id="X1k68:pRSc!:i5q,H-M@">
                         <field name="STATE">LOW</field>
                       </block>
                     </value>
                     <next>
-                      <block type="time_delaymicros" id="FA}S*X^_GbdwjuEou7sl">
-                        <value name="DELAY_TIME_MICRO">
-                          <block type="math_number" id="^6_*END(HZt8NZLq:^c:">
+                      <block type="time_delay" id="Z]n5c:]{Fm]/X})1|fRq">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="IJ0DRP|OQB/)HLViX|yJ">
                             <field name="NUM">3000</field>
                           </block>
                         </value>

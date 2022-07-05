@@ -9,9 +9,9 @@
           </block>
         </value>
         <next>
-          <block type="time_delaymicros" id="i4Jo.Vn:oE.0~Dd@L7=d">
-            <value name="DELAY_TIME_MICRO">
-              <block type="math_number" id="}=trmJZZ|]20Sz9hdOuq">
+          <block type="time_delay" id="U/in5DbD@:k/%)i#9!O3">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="yWuwj6APDupJ{l97K@G`">
                 <field name="NUM">2000</field>
               </block>
             </value>
@@ -24,9 +24,9 @@
                   </block>
                 </value>
                 <next>
-                  <block type="time_delaymicros" id="S{Sk9*9]{l_wuvR!lQJ`">
-                    <value name="DELAY_TIME_MICRO">
-                      <block type="math_number" id="M~6`hNT)o]C;R18T]9%{">
+                  <block type="time_delay" id="Q1X2(7~?7*nNbffXuX%A">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="|yBU/A;w+NniT;FP%Hn|">
                         <field name="NUM">2000</field>
                       </block>
                     </value>

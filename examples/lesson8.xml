@@ -17,12 +17,12 @@
           <block type="math_random_int" id="[YaJh=}W(LY%/XqzDs1,">
             <value name="FROM">
               <block type="math_number" id="I7{iP:ji.Om`(wpa`Y]j">
-                <field name="NUM">30000</field>
+                <field name="NUM">2000</field>
               </block>
             </value>
             <value name="TO">
               <block type="math_number" id="ALng?8}~bTx_*]Vdx:iC">
-                <field name="NUM">32000</field>
+                <field name="NUM">2200</field>
               </block>
             </value>
           </block>
@@ -283,10 +283,10 @@
                           </block>
                         </statement>
                         <next>
-                          <block type="time_delaymicros" id="|];?^iR[?z=[O;EGN6u0">
-                            <value name="DELAY_TIME_MICRO">
-                              <block type="math_number" id="/7HmO1j^[4Ms=(^Q9Aka">
-                                <field name="NUM">50</field>
+                          <block type="time_delay" id="3+eViT?oe,Sk4QlImJ:K">
+                            <value name="DELAY_TIME_MILI">
+                              <block type="math_number" id="F?zoB4PlpRRvUdsH?L(i">
+                                <field name="NUM">5</field>
                               </block>
                             </value>
                           </block>

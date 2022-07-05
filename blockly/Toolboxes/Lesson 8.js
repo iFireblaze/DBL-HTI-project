@@ -61,8 +61,8 @@
 '  </category>' +
 '   <sep></sep>' +
 '  <category id="catLesson 4" name="Lesson 4">' +
-'    <block type="time_delaymicros">' +
-'      <value name="DELAY_TIME_MICRO">' +
+'    <block type="time_delay">' +
+'      <value name="TIME_DELAY">' +
 '        <block type="math_number">' +
 '          <field name="NUM">2000</field>' +
 '        </block>' +
